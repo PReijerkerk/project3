@@ -1,0 +1,21 @@
+.btn-large{
+ background: #a1887f brown lighten-2;
+}
+
+h4 {
+  font-family: 'Lobster Two', cursive;
+  color:white;
+}
+h5, div{
+  font-family: 'Amaranth', sans-serif;
+  color:white;
+}
+button{
+  color:darkcyan !important;
+  font-family: 'Amaranth', sans-serif;
+}
+
+a {
+  color:darkcyan !important;
+  background: #a1887f;
+}
