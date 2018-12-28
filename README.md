@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Feature used:
+- Material UI
+- API used: 
+- Passport user Authentication
+
 ## Available Scripts
 
 In the project directory, you can run:
