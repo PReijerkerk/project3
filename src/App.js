@@ -6,9 +6,9 @@ import Card from "./components/LoginPgComponents/Card/card";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from './components/MainPgComponents/NavBar/navBar';
 import NavTabs from "./components/MainPgComponents/NavTabs";
-import loginPg from "./pages/loginPg";
+import LoginPg from "./pages/loginPg";
 import collectionsPg from "./pages/collectionsPg";
-import mainPg from "./pages/mainPg";
+import MainPg from "./pages/mainPg";
 import './App.css';
 
 // changed from stateful to stateless component Statefulness will be rendered like that in activity 11 in 
@@ -19,20 +19,22 @@ function App() {
         <NavBar>
           <Router>
             <div>
-              <NavTabs />
-              <Route exact path="/" component= {mainPg} />
-              <Route exact path="/login" component={loginPg} />
-              <Route exact path="/collections" component={collectionsPg} />
-              {/* <Route path="/about" component={About} /> */}
+              <NavTabs>
+                <Route exact path="/" component= {MainPg} />
+                <Route exact path="/login" component={LoginPg} />
+                <Route exact path="/collections" component={collectionsPg} />
+              </NavTabs>
             </div>
           </Router>
         </NavBar>
 
-        {/* <Card/> below card should be the initial loginPg route and
+        {/* <Card/> & <LoginPg/> below card should be the initial loginPg route and
         all other components should be disabled or hidden until a user
         either logins or creates an acct. This is only for testing on 
-        what it will look like, please delete when route bove is working */}
+        what it will look like, please delete when route bove is working...
+        Currently Cannot get LoginPg options to render... still working on this.*/}
         <Card/>
+        <LoginPg/>
      </div>
     );
   }
