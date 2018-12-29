@@ -5,6 +5,9 @@
   "dependencies": {
     "@material-ui/core": "^3.7.1",
     "axios": "^0.18.0",
+    "bcrypt-nodejs": "0.0.3",
+    "mongoose": "^5.4.1",
+    "passport": "^0.4.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
