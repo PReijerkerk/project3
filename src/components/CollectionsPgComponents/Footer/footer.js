@@ -1,0 +1,1 @@
+// content for footer component will go here:
