@@ -4,7 +4,7 @@ import Card from "../Components/LoginPgComponents/Card/Card";
 // not sure how this will react with the collectionsPg.js state
 class LoggedIn extends Component {
   state = { 
-    name: "",
+    name: "", // <-- Do we need this?
     userName: "",
     Password: ""
    }

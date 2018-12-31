@@ -1,17 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavTabs() {
   return (
     <ul className="nav nav-tabs">
-       <li className="nav-item">
-      {/* link to LoginLogout option visible on MainPg */}
-        <Link
-          to="/loginPg"
-          className={window.location.pathname === "/loginPg" ? "nav-link active" : "nav-link"}
-        >
-          Login
-        </Link>
-      </li>
       <li className="nav-item">
       {/* link to MainPg content */}
         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
@@ -19,9 +11,18 @@ function NavTabs() {
         </Link>
       </li>
       <li className="nav-item">
+      {/* link to LoginLogout option visible on MainPg */}
+        <Link
+          to="/login"
+          className={window.location.pathname === "/loginPg" ? "nav-link active" : "nav-link"}
+        >
+          Login
+        </Link>
+      </li>
+      <li className="nav-item">
       {/* link to CollectionsPg corresponding to Searches of collections in the DB */}
         <Link
-          to="/CollectionsPg"
+          to="/Collections"
           className={window.location.pathname === "/CollectionsPg" ? "nav-link active" : "nav-link"}
         >
           Collections
@@ -30,7 +31,7 @@ function NavTabs() {
       <li className="nav-item">
       {/* After MVP is met - Contactpg might be implimented */}
         <Link
-          to="/AboutUs"
+          to="/contact"
           className={window.location.pathname === "/AboutUs" ? "nav-link active" : "nav-link"}
         >
           About Us
@@ -39,8 +40,8 @@ function NavTabs() {
       <li className="nav-item">
       {/* After MVP is met - Contactpg might be implimented */}
         <Link
-          to="/Contact"
-          className={window.location.pathname === "/Contact" ? "nav-link active" : "nav-link"}
+          to="/contact"
+          className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}
         >
           Contact
         </Link>
