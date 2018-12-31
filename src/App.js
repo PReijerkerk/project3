@@ -3,11 +3,12 @@ import React from 'react';
 import Card from "./Components/LoginPgComponents/Card/Card";
 //overview page( the homepage):
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from './Components/MainPgComponents/NavBar/NavBar';
+import NavBar from './Components/MainPgComponents/NavBar/navBar';
 import NavTabs from "./Components/MainPgComponents/NavTabs/NavTabs";
 import LoginPg from "./pages/loginPg";
 import collectionsPg from "./pages/collectionsPg";
 import MainPg from "./pages/mainPg";
+// import Footer from "./Components/CollectionsPgComponents"
 import './App.css';
 
 // changed from stateful to stateless component Statefulness will be rendered like that in activity 11 in 
@@ -31,6 +32,7 @@ function App() {
       <div className="container">
         <Card/>
       </div>
+      {/* <Footer/> */}
      </div>
     );
   }
