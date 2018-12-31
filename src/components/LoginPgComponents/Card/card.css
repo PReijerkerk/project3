@@ -1,8 +1,9 @@
-card {
-  max-width: 345,
+h1{
+  font-family: 'Lobster Two', cursive;
+
 }
 
+p, button, .card-title{
+  font-family: Amaranth;
+}
 
-media {
-  height: 140,
-};

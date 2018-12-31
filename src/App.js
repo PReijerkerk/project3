@@ -1,11 +1,10 @@
 import React from 'react';
-// inital login card:
-import Card from "./components/LoginPgComponents/Card/card";
-// navbar will hold the NavTabs listed below for main collections 
+// inital login card this is to be called in from the loginPg but for now it is directly pulled in here for testing
+import Card from "./Components/LoginPgComponents/Card/Card";
 //overview page( the homepage):
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from './components/MainPgComponents/NavBar/navBar';
-import NavTabs from "./components/MainPgComponents/NavTabs";
+import NavBar from './Components/MainPgComponents/NavBar/NavBar';
+import NavTabs from "./Components/MainPgComponents/NavTabs/NavTabs";
 import LoginPg from "./pages/loginPg";
 import collectionsPg from "./pages/collectionsPg";
 import MainPg from "./pages/mainPg";
@@ -28,13 +27,10 @@ function App() {
           </Router>
         </NavBar>
 
-        {/* <Card/> & <LoginPg/> below card should be the initial loginPg route and
-        all other components should be disabled or hidden until a user
-        either logins or creates an acct. This is only for testing on 
-        what it will look like, please delete when route bove is working...
-        Currently Cannot get LoginPg options to render... still working on this.*/}
+        {/* the below is just for troubleshooting, should be called in above in the loginPg */}
+      <div className="container">
         <Card/>
-        <LoginPg/>
+      </div>
      </div>
     );
   }

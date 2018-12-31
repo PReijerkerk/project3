@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.7.1",
     "axios": "^0.18.0",
     "bcrypt-nodejs": "0.0.3",
     "mongoose": "^5.4.1",

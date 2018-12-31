@@ -16,7 +16,7 @@ function NavTabs() {
           to="/login"
           className={window.location.pathname === "/loginPg" ? "nav-link active" : "nav-link"}
         >
-          Login/Logout
+          Login
         </Link>
       </li>
       <li className="nav-item">
