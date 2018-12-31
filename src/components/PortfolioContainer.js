@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import NavTabs from "../Components/MainPgComponents/NavTabs/NavTabs";
-import LoginPg from "../pages/LoginPg";
-import CollectionsPg from "../pages/CollectionsPg";
-import MainPg from "../pages/MainPg";
-import AboutUs from "../pages/AboutUs"
-import Contact from "../pages/Contact"
+import React, { Component } from 'react';
+import NavTabs from '../Components/MainPgComponents/NavTabs/NavTabs';
+import LoginPg from '../pages/LoginPg';
+import CollectionsPg from '../pages/CollectionsPg';
+import MainPg from '../pages/MainPg';
+import AboutUs from '../pages/AboutUs';
+import Contact from '../pages/Contact';
 
 class Portfolio extends Component {
   state = {
-    currentPage: "LoginPg"
+    currentPage: 'LoginPg'
   };
 
   handlePageChange = page => {
@@ -16,13 +16,13 @@ class Portfolio extends Component {
   };
 
   renderPage = () => {
-    if (this.state.currentPage === "LoginPg") {
+    if (this.state.currentPage === 'LoginPg') {
       return <LoginPg />;
-    } else if (this.state.currentPage === "MainPg") {
+    } else if (this.state.currentPage === 'MainPg') {
       return <MainPg />;
-    } else if (this.state.currentPage === "CollectionsPg") {
+    } else if (this.state.currentPage === 'CollectionsPg') {
       return <CollectionsPg />;
-    } else if (this.state.currentPage === "AboutUs") {
+    } else if (this.state.currentPage === 'AboutUs') {
         return <AboutUs />;
     } else {
       return <Contact />;

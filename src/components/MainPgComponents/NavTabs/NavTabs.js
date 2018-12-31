@@ -1,46 +1,50 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavTabs() {
   return (
-    <ul className="nav nav-tabs">
-       <li className="nav-item">
-      {/* link to LoginLogout option visible on MainPg */}
+    <ul className='nav nav-tabs'>
+      <li className='nav-item'>
         <Link
-          to="/loginPg"
-          className={window.location.pathname === "/loginPg" ? "nav-link active" : "nav-link"}
+          to='/'
+          className={window.location.pathname === '/' ? 'nav-link active' : 'nav-link'}
+        >
+          <h1>TrophyCase</h1>
+        </Link>
+      </li>
+      <li className='nav-item'>
+        <Link
+          to='/LoginPg'
+          className={window.location.pathname === '/LoginPg' ? 'nav-link active' : 'nav-link'}
         >
           Login
         </Link>
       </li>
-      <li className="nav-item">
-      {/* link to MainPg content */}
-        <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+      <li className='nav-item'>
+        <Link to='/' className={window.location.pathname === '/' ? 'nav-link active' : 'nav-link'}>
           Home
         </Link>
       </li>
-      <li className="nav-item">
-      {/* link to CollectionsPg corresponding to Searches of collections in the DB */}
+      <li className='nav-item'>
         <Link
-          to="/CollectionsPg"
-          className={window.location.pathname === "/CollectionsPg" ? "nav-link active" : "nav-link"}
+          to='/CollectionsPg'
+          className={window.location.pathname === '/CollectionsPg' ? 'nav-link active' : 'nav-link'}
         >
           Collections
         </Link>
       </li>
-      <li className="nav-item">
-      {/* After MVP is met - Contactpg might be implimented */}
+      <li className='nav-item'>
         <Link
-          to="/AboutUs"
-          className={window.location.pathname === "/AboutUs" ? "nav-link active" : "nav-link"}
+          to='/AboutUs'
+          className={window.location.pathname === '/AboutUs' ? 'nav-link active' : 'nav-link'}
         >
           About Us
         </Link>
       </li>
-      <li className="nav-item">
-      {/* After MVP is met - Contactpg might be implimented */}
+      <li className='nav-item'>
         <Link
-          to="/Contact"
-          className={window.location.pathname === "/Contact" ? "nav-link active" : "nav-link"}
+          to='/Contact'
+          className={window.location.pathname === '/Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
         </Link>
