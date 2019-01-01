@@ -12,6 +12,7 @@ import './App.css';
 
 function App() {
     return (
+
         <Router>
           <div>
             <NavTabs />
@@ -22,6 +23,7 @@ function App() {
             <Route exact path='/Contact' component={Contact} />
           </div>
         </Router>  
+
     );
   }
 
