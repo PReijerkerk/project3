@@ -3,3 +3,10 @@
 //other user collection by userName or collectionName
 //this may be outside our MVP (Dont focus on this unless MVP
 //is completed)
+// import React from 'react'
+
+// function Search () {
+  
+// }
+
+// export default Search
