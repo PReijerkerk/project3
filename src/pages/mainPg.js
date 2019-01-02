@@ -1,10 +1,10 @@
 import React from 'react'
-import Avatar from '../Components/MainPgComponents/Profile/Avatar'
+import Profile from '../Components/MainPgComponents/Profile/profile'
 
 function MainPg() {
   return (
     <div>
-      <Avatar />
+      <Profile />
     </div>
   )
 }
