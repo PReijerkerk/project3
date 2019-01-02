@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Card from '../Components/LoginPgComponents/Card/Card';
+import Card from '../components/LoginPgComponents/Card/Card';
 
 // not sure how this will react with the collectionsPg.js state
 // class LoginPg extends Component {

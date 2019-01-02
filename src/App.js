@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavTabs from './Components/MainPgComponents/NavTabs/NavTabs';
+import NavTabs from './components/MainPgComponents/NavTabs/NavTabs';
 // import Navbar from './Components/MainPgComponents/NavBar/Navbar';
-import LoginPg from './pages/LoginPg';
+import LoginPg from './pages/LoginPg.js';
 import CollectionsPg from './pages/CollectionsPg';
 import MainPg from './pages/MainPg';
 import AboutUs from './pages/AboutUs';
