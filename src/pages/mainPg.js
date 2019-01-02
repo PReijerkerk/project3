@@ -1,9 +1,10 @@
 import React from 'react'
+import Avatar from '../Components/MainPgComponents/Profile/Avatar'
 
 function MainPg() {
   return (
     <div>
-      Main Page
+      <Avatar />
     </div>
   )
 }
