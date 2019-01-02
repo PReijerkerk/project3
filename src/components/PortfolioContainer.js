@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import NavTabs from '../Components/MainPgComponents/NavTabs/NavTabs';
 import LoginPg from '../pages/LoginPg';
-import CollectionsPg from '../pages/CollectionsPg';
+import CollectionsPg from '../pages/collectionsPg';
 import MainPg from '../pages/MainPg';
 import AboutUs from '../pages/AboutUs';
-import Contact from '../pages/Contact';
+import Contact from '../pages/contact';
 
 class Portfolio extends Component {
   state = {
