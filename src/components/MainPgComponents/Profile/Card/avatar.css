@@ -1,3 +1,12 @@
 .card {
     width: 18rem;
+    float: right;
+    margin-top: -250px;
+    margin-right: 250px;
+
+}
+
+.card-img-top {
+    height: 10%;
+    width: 100%;
 }

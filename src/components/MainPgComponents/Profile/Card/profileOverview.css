@@ -1,4 +1,6 @@
 .profileCard {
-    width: 600px;
-    margin: 20px;
+    width: 800px;
+    height: 200px;
+    margin: 50px;
+    border: 2px solid black;
 }
