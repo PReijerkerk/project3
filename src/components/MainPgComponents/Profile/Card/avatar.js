@@ -3,7 +3,9 @@ import './avatar.css'
 
 
 function Avatar(){
-    const firstName = ''
+    // Only using SpongeBob to show name until DB is connected
+    // const firstName = ''
+    const firstName = 'SpongeBob'
 
     const date = new Date()
     const hours = date.getHours()
