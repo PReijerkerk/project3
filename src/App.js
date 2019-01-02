@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavTabs from './components/MainPgComponents/NavTabs/NavTabs';
 // import Navbar from './Components/MainPgComponents/NavBar/Navbar';
-import LoginPg from './pages/LoginPg';
-import CollectionsPg from './pages/CollectionsPg';
-import MainPg from './pages/MainPg';
-import AboutUs from './pages/AboutUs';
-import Contact from './pages/Contact';
+import LoginPg from './pages/loginPg';
+import CollectionsPg from './pages/collectionsPg';
+import MainPg from './pages/mainPg';
+import AboutUs from './pages/aboutUs';
+import Contact from './pages/contact';
 import './App.css';
 // import Portfolio from './Components/PortfolioContainer';
 
