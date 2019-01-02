@@ -1,4 +1,4 @@
-.card {
+.avatarCard {
     width: 18rem;
     float: right;
     margin-top: -250px;
@@ -7,6 +7,11 @@
 }
 
 .card-img-top {
-    height: 10%;
-    width: 100%;
+    height: 8%;
+    width: 80%;
+}
+
+.collection-btn {
+    float: right;
+    margin: 20px;
 }
