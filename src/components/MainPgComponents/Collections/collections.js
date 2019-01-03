@@ -1,19 +1,28 @@
-// import React from 'react'
-// import Grid from '@material-ui/core/Grid';
-// import TextField from '@material-ui/core/TextField';
-// // import * as contentful from 'contentful'; dont think I need this if i did look up cli for contentful
+import React from 'react'
+import './collections.css'
 
-// // in case you need tokes for users: 
-// // const USER_ID = '';
-// // const ACCESS_TOKEN = '';
+  return (
+    <div className="gridContainer">
+        <div className="row">
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+        </div>
+        <div className="row">
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+        </div>
+        <div className="row">
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+        </div>
+    </div>
+  )
+}
 
-
-// const Collections = () =>{
-//   return (
-//     <div>
-
-//     </div>
-//   )
-// }
-
-// export default Collections;
+export default Collections;

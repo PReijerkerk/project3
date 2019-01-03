@@ -1,4 +1,5 @@
 import React from 'react'
+import Collections from '../Components/CollectionsPgComponents/Container/Container'
 // import React, { Component } from 'react';
 // import API from '../utils/API';
 
@@ -27,8 +28,8 @@ import React from 'react'
 function CollectionsPg() {
   return (
     <div>
-        Collections
-      </div>
+      <Collections />
+    </div>
   )
 }
 

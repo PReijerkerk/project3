@@ -1,12 +1,28 @@
-// might not need this but this would be a bootstrap 
-//container to hold pg content
-
 import React from 'react';
+import './container.css'
 
 function Container() {
   return(
     <div className="container">
-      
+      <h2>Collection Title</h2>
+       <div className="row">
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+        </div>
+        <div className="row">
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+        </div>
+        <div className="row">
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+            <div className="col">col</div>
+        </div>
     </div>
   )
 }
