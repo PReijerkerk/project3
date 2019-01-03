@@ -1,5 +1,5 @@
 import React from 'react'
-import Profile from '../Components/MainPgComponents/Profile/profile'
+import Profile from '../components/MainPgComponents/Profile/profile'
 
 function MainPg() {
   return (
