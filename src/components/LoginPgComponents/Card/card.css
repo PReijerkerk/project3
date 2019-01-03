@@ -1,9 +1,11 @@
 h1{
   font-family: 'Lobster Two', cursive;
+  color: #b80101;
 
 }
 
 p, button, .card-title{
   font-family: Amaranth;
+  color:#1c7909 ;
 }
 

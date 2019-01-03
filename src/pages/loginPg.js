@@ -1,5 +1,4 @@
 import React from 'react'
-// import React, { Component } from 'react';
 import Card from '../Components/LoginPgComponents/Card/card';
 
 // not sure how this will react with the collectionsPg.js state
@@ -9,23 +8,11 @@ import Card from '../Components/LoginPgComponents/Card/card';
 //     userName: '',
 //     Password: ''
 //    }
-
-//   //  not sure if this should be name or userName
-//    handleChange = name => event => {
-//      this.setState({
-//        [name]:event.target.value,
-//      });
-//    };
-
-//   render() { 
-
-    // const {classes} = this.props;
   function LoginPg() {
     return ( 
-    <div>
-{/* need to install bootstrap component here */}
-    <Card />
-    </div>
+      <div>
+        <Card/>
+      </div>
      );
   }
 
