@@ -1,5 +1,5 @@
 import React from 'react'
-import Collections from '../Components/CollectionsPgComponents/Container/Container'
+import Collections from '../Components/CollectionsPgComponents/Container/container'
 // import React, { Component } from 'react';
 // import API from '../utils/API';
 
