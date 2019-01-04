@@ -44,6 +44,7 @@ class LoginModal extends React.Component{
     const { isVisible } = this.state;
 
     return (
+      
       <PoseGroup>
         {isVisible && [
           // If animating more than one child, each needs a `key`
