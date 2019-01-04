@@ -3,10 +3,11 @@ import './avatar.css'
 
 
 function Avatar(){
-    // Only using SpongeBob to show name until DB is connected
+    // Only using SpongeBob to show name until DB is connected - actual code commented below
     // const firstName = ''
     const firstName = 'SpongeBob'
 
+    // Greet user by time of day
     const date = new Date()
     const hours = date.getHours()
     let timeOfDay 

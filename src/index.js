@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ErrorBoundry from "./components/ErrorBoundary/ErrorBoundary"
+import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary"
 ReactDOM.render(
-  <ErrorBoundry render={()=> <p>Opps</p>}>
+  <ErrorBoundary render={()=> <p>Opps</p>}>
     <App />
-  </ErrorBoundry>, document.getElementById('root')
+  </ErrorBoundary>, document.getElementById('root')
   );
 
 serviceWorker.unregister();
