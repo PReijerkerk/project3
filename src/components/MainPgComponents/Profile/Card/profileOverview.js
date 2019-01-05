@@ -5,7 +5,7 @@ function ProfileOverview(){
 
     return (
         <div className="profileCard">
-            <div className="card-header">Profile Overview</div>
+            <div className="card-header"><strong>Profile Overview</strong></div>
             <div className="card-body">
                 <h5 className="card-title">Light card title</h5>
                 <p className="card-text">Plotly</p>

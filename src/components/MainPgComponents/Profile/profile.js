@@ -7,10 +7,12 @@ import React from 'react';
 import Avatar from './Card/avatar'
 import ProfileOverview from './Card/profileOverview'
 import UserCollections from './Card/userCollections'
+import "./Card/profile.css"
+
 
 function Profile() {
   return (
-    <div>
+    <div className="mainContainer">
       <ProfileOverview />
       <Avatar />
       <UserCollections />
