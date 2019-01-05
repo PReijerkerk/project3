@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './avatar.css'
+import ProfColSettings from './profSettings'
 
+class Avatar extends Component {
+  state = {
+      profileSetting:false
+  }
+  // not rendering any modal when page first loads 
+  modalRendering = () => {
+    if (this.state.profileSetting) {
+      return <ProfColSettings/>
+    } 
+  }
 
-function Avatar(){
-    // Only using SpongeBob to show name until DB is connected - actual code commented below
+  render(){
+ // Only using SpongeBob to show name until DB is connected - actual code commented below
     // const firstName = ''
     const firstName = 'SpongeBob'
 
@@ -21,18 +32,28 @@ function Avatar(){
     }
 
     return(
-        <div className="avatarCard">
-            <div className="imgWrapper">
-                <img className="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/330px-Spongebob-squarepants.svg.png" alt="Card image cap" />
-                <div className="card-body">
-                    <h5 className="card-title">Good {`${timeOfDay}`}, {`${firstName}`}!</h5>
-                    <p className="card-text"></p>
-                    <a href="#" className="btn btn-primary">Profile Settings</a>
-                    <button className="collection-btn">Add A New Collection</button>
-                </div>
-            </div>
+      <div className="avatarCard">
+         <div className="imgWrapper">
+          <img className="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/330px-Spongebob-squarepants.svg.png" alt="Card cap" />
+          <div className="card-body">
+            <h5 className="card-title">Good {`${timeOfDay}`}, {`${firstName}`}!</h5>
+            <p className="card-text"></p>
+            <button 
+            className="btn btn-primary" onClick= {()=>(
+              this.setState({profileSetting:true})
+          )}>
+              Profile Settings
+            </button>
+          </div>
         </div>
+        <button className="collection-btn">Add A New Collection</button>
+
+        {this.modalRendering()}
+    </div>
     )
+  }
 }
+
+   
 
 export default Avatar
