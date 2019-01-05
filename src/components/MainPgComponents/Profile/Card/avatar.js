@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './avatar.css'
 import ProfColSettings from './profSettings'
-
+import CollectionModal  from './collectionModal'
 class Avatar extends Component {
   state = {
-      profileSetting:false
+      profileSetting:false,
+      collectionModal:false
   }
   // not rendering any modal when page first loads 
   modalRendering = () => {
@@ -33,27 +34,27 @@ class Avatar extends Component {
 
     return(
       <div className="avatarCard">
-         <div className="imgWrapper">
+        <div>
           <img className="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/330px-Spongebob-squarepants.svg.png" alt="Card cap" />
           <div className="card-body">
             <h5 className="card-title">Good {`${timeOfDay}`}, {`${firstName}`}!</h5>
             <p className="card-text"></p>
             <button 
             className="btn btn-primary" onClick= {()=>(
-              this.setState({profileSetting:true})
+              this.setState({profileSetting:true, collectionModal:false})
           )}>
               Profile Settings
             </button>
           </div>
         </div>
-        <button className="collection-btn">Add A New Collection</button>
+        <button className="collection-btn" onClick ={()=>(
+            this.setState({collectionModal:true, profileSetting:false})
+        )}>Add A New Collection</button>
 
         {this.modalRendering()}
     </div>
     )
   }
 }
-
-   
 
 export default Avatar
