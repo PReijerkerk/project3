@@ -16,7 +16,12 @@ const itemSchema = new Schema({
         type: String
     },
     collection: {
-        type: mongoose.Schema.ObjectId, ref: 'Collection'
+        type: mongoose.Schema.ObjectId, ref: 'Collection',
+        required: true
+    },
+    user: {
+        type: mongoose.Schema.ObjectId, ref: 'User',
+        required: true
     }
 
 

@@ -6,6 +6,10 @@ name: {
     type: String,
     required: true
     },
+story: {
+    type: String,
+
+},
 date: {
     type: Date,
     default: Date.now
