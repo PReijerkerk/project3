@@ -11,7 +11,9 @@ class Avatar extends Component {
   modalRendering = () => {
     if (this.state.profileSetting) {
       return <ProfColSettings/>
-    } 
+    } else if (this.state.collectionModal){
+      return <CollectionModal/>
+    }
   }
 
   render(){
