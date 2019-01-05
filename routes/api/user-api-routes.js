@@ -60,6 +60,23 @@ module.exports = function(app) {
         });
     });
     
+    app.get("/api/users/:id", function(req, res) {
+        db.User.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(dbUser){
+            res.json(dbUser);
+        });
+    });
 
-    
-}
+    app.delete("/api/users/:id", function(req, res) {
+        db.User.destroy({
+            where: {
+                id: req.paramas.id
+            }
+        }).then(function(dbUser){
+            res.json(dbUser);
+        });
+    });
+};
