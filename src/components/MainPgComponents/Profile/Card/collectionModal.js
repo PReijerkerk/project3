@@ -50,13 +50,24 @@ class CollectionModal extends React.Component{
           // If animating more than one child, each needs a `key`
           <Shade key="shade" className="shade" />,
           <Modalz key="modalz" className="modalz">
-           <p>Please Login Below:</p>
+           <p>
+              Insert collection name and a short story 
+              explaining the items therin:
+            </p>
             {/* insertion of new collections form: */}
           <form action="/">
-            
-           
+            <div className="input-group mb-3">
+            <div className="input-group-prepend">
+              <span className="input-group-text" id="collectionName">Name:</span>
+            </div>
+            <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          </div>
+          <div className="form-group">
+              <label htmlFor="collectionStory">Collection's Story: </label>
+              <textarea className="form-control" id="collectionStory" rows="3"></textarea>
+          </div>
             <button type="submit" className="btn btn-default">
-            Submit
+            Compile Collection
           </button>
           </form>
           </Modalz>
