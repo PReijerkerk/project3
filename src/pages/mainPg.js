@@ -1,6 +1,6 @@
 import React from 'react'
-import Profile from '../Components/MainPgComponents/Profile/profile'
-import "../Components/MainPgComponents/Profile/profile.css"
+import Profile from '../components/MainPgComponents/Profile/profile'
+import "../components/MainPgComponents/Profile/profile.css"
 
 function MainPg() {
   return (
