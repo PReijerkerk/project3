@@ -5,7 +5,7 @@
 
 import React from 'react';
 import posed, { PoseGroup } from 'react-pose';
-import "./loginForm.css"
+
 
 const Modalz = posed.div({
   enter: {
@@ -30,7 +30,7 @@ const Shade = posed.div({
   exit: { opacity: 0 }
 });
 
-class LoginModal extends React.Component{
+class ProfSetModal extends React.Component{
 
   state = { isVisible: false };
 
@@ -54,19 +54,28 @@ class LoginModal extends React.Component{
             {/* insertion of login form: */}
           <form action="/">
             <div className="form-group">
-              <label htmlFor="username">Username:</label>
-              <input type="username" className="form-control" id="username"/>
+              <label htmlFor="email">New Email address:</label>
+              <input type="email" className="form-control" id="newEmail"/>
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password:</label>
-              <input type="password" className="form-control" id="password"/>
+              <label htmlFor="pwd">New Password:</label>
+              <input type="password" className="form-control" id="newPwd"/>
             </div>
-            <div className="checkbox">
-              <label><input type="checkbox"/> Remember me</label>
+            <div className="form-group">
+              <label htmlFor="collectorStatus">Collector Status:</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+                <option> Vanilla Collector</option>
+                <option>Horder Wants to be Organized</option>
+                <option>Family History Collector</option>
+                <option>Collector with Bragging Rights</option>
+              </select>
             </div>
-            {/* button should be linked not just to the login from passport but also a move over to the "mainPg"*/}
+            <div className="form-group">
+              <label htmlFor="bio">Your Bio: </label>
+              <textarea className="form-control" id="bio" rows="3"></textarea>
+            </div>
             <button type="submit" className="btn btn-default">
-            Submit
+              Update Profile
           </button>
           </form>
           </Modalz>
@@ -76,4 +85,4 @@ class LoginModal extends React.Component{
   }
 }
 
-export default LoginModal;
+export default ProfSetModal;

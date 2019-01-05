@@ -4,14 +4,18 @@
 //additional collections to your profile. This card will be beside to the
 //right of the graphing display of the collections (using plot.ly.javascript)
 import React from 'react';
-import Avatar from './Cards/Avatar'
+import Avatar from './Card/avatar'
+import ProfileOverview from './Card/profileOverview'
+import UserCollections from './Card/userCollections'
 
 function Profile() {
   return (
     <div>
+      <ProfileOverview />
       <Avatar />
+      <UserCollections />
     </div>
   )
 }
 
-ReactDOM.render(<Profile />, document.getElementById('root'));
+export default Profile

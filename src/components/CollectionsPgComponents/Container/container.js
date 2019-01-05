@@ -1,9 +1,11 @@
-import React from 'react'
-import './collections.css'
+import React from 'react';
+import './container.css'
 
-  return (
-    <div className="gridContainer">
-        <div className="row">
+function Container() {
+  return(
+    <div className="container">
+      <h2>Collection Title</h2>
+       <div className="row">
             <div className="col">col</div>
             <div className="col">col</div>
             <div className="col">col</div>
@@ -25,4 +27,4 @@ import './collections.css'
   )
 }
 
-export default Collections;
+export default Container; 
