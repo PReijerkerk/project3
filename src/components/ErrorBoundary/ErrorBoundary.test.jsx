@@ -1,6 +1,6 @@
 // utilized when running "yarn test"
 import React from 'react';
-import ErrorBoundary from "./ErrorBoundary"
+import ErrorBoundary from "./errorBoundary"
 import { mount } from 'enzyme';
 
 // this is a fake child comp that will test the ErrorBoundary
