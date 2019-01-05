@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../components/LoginPgComponents/Card/card'
+import Card from '../Components/LoginPgComponents/Card/card'
 
   function LoginPg() {
     return ( 
