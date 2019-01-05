@@ -7,6 +7,7 @@
     border: solid 2px black;
     padding: 20px;
     background-color: beige;
+    text-align: center;
 }
 
 .imgWrapper {
@@ -24,6 +25,7 @@
     font-size: 24px;
     color: #033469;
     margin-bottom: 5px;
+    margin-left: -22px;
 }
 
 h5.card-title {
@@ -34,4 +36,5 @@ h5.card-title {
     width: 250px;
     font-size: 24px;
     color: #033469;
+    margin-left: -22px;
 }
