@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary"
 
+
 ReactDOM.render(
   <ErrorBoundary render={()=> <p>Opps</p>}> 
     <App />
