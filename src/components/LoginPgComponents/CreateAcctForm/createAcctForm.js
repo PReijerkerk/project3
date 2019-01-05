@@ -49,16 +49,12 @@ class CreateAcctModal extends React.Component{
           // If animating more than one child, each needs a `key`
           <Shade key="shade" className="shade" />,
           <Modalz key="modalz" className="modalz">
-           <p>Please Create Your Accout Below:</p>
+           <p>Please Create Your Account Below:</p>
             {/* insertion of creating acct form: */}
           <form action="/">
             <div className="form-group">
-              <label htmlFor="userName">User Name:</label>
+              <label htmlFor="userName">Username:</label>
               <input type="userName" className="form-control" id="userName"/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email address:</label>
-              <input type="email" className="form-control" id="email"/>
             </div>
             <div className="form-group">
               <label htmlFor="pwd">Password:</label>
