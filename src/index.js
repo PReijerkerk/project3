@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ErrorBoundary from "./components/ErrorBoundary/errorBoundary"
+
 ReactDOM.render(
-  <ErrorBoundary render={()=> <p>Opps</p>}>
+  <ErrorBoundary render={()=> <p>Opps</p>}> 
     <App />
   </ErrorBoundary>, document.getElementById('root')
   );
