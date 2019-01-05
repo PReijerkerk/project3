@@ -3,4 +3,18 @@
     height: 200px;
     margin: 50px;
     border: 2px solid black;
+    background-color: beige;
+    color: #033469;
+}
+
+.card-title {
+    color: #033469;
+}
+
+.card-text {
+    color: #033469;
+}
+
+.card-header {
+    color: #033469; 
 }

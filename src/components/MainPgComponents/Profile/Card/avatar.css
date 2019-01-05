@@ -3,7 +3,7 @@
     float: right;
     margin-top: -250px;
     margin-right: 250px;
-
+    color: beige;
 }
 
 .card-img-top {
@@ -16,4 +16,9 @@
     margin: 20px;
     width: 300px;
     font-size: 24px;
+    color: #033469;
+}
+
+h5.card-title {
+    color: beige;
 }
