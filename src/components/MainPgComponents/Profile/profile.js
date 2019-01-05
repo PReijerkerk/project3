@@ -9,6 +9,7 @@ import ProfileOverview from './Card/profileOverview'
 import UserCollections from './Card/userCollections'
 import "./Card/profile.css"
 
+
 function Profile() {
   return (
     <div className="mainContainer">

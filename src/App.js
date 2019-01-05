@@ -14,7 +14,7 @@ function App() {
     return (
 
         <Router>
-          <div>
+          <div className="mainContainer"> 
             <NavTabs />
             <Route exact path='/' component= {MainPg} />
             <Route exact path='/LoginPg' component={LoginPg} />
