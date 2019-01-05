@@ -22,15 +22,15 @@ function Avatar(){
 
     return(
         <div className="avatarCard">
-            <div>
+            <div className="imgWrapper">
                 <img className="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/330px-Spongebob-squarepants.svg.png" alt="Card image cap" />
                 <div className="card-body">
                     <h5 className="card-title">Good {`${timeOfDay}`}, {`${firstName}`}!</h5>
                     <p className="card-text"></p>
                     <a href="#" className="btn btn-primary">Profile Settings</a>
+                    <button className="collection-btn">Add A New Collection</button>
                 </div>
             </div>
-            <button className="collection-btn">Add A New Collection</button>
         </div>
     )
 }

@@ -3,7 +3,6 @@
     margin: 50px;
     width: 800px;
     height: 300px;
-    padding: 20px;
     background-color: beige;
     color: #033469;
 }
@@ -14,5 +13,4 @@
 }
 
 .profile-card {
-    padding: 20px;
 }

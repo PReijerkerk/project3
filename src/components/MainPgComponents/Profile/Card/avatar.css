@@ -1,9 +1,18 @@
 .avatarCard {
     width: 18rem;
+    height: 475px;
     float: right;
     margin-top: -250px;
     margin-right: 250px;
-    color: beige;
+    color: black;
+    border: solid 2px black;
+    padding: 20px;
+    background-color: beige;
+}
+
+.imgWrapper {
+    padding: 10px;
+    margin-left: 10px;
 }
 
 .card-img-top {
@@ -14,11 +23,15 @@
 .collection-btn {
     float: right;
     margin: 20px;
-    width: 300px;
+    width: 250px;
     font-size: 24px;
     color: #033469;
 }
 
 h5.card-title {
-    color: beige;
+    color: black;
+}
+
+.btn-primary {
+
 }
