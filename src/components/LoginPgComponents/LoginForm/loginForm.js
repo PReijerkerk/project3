@@ -54,12 +54,12 @@ class LoginModal extends React.Component{
             {/* insertion of login form: */}
           <form action="/">
             <div className="form-group">
-              <label htmlFor="email">Email address:</label>
-              <input type="email" className="form-control" id="email"/>
+              <label htmlFor="username">Username:</label>
+              <input type="username" className="form-control" id="username"/>
             </div>
             <div className="form-group">
-              <label htmlFor="pwd">Password:</label>
-              <input type="password" className="form-control" id="pwd"/>
+              <label htmlFor="password">Password:</label>
+              <input type="password" className="form-control" id="password"/>
             </div>
             <div className="checkbox">
               <label><input type="checkbox"/> Remember me</label>
