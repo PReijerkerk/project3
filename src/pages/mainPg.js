@@ -1,9 +1,10 @@
 import React from 'react'
-import Profile from '../components/MainPgComponents/Profile/profile'
+import Profile from '../Components/MainPgComponents/Profile/profile'
+import "../Components/MainPgComponents/Profile/profile.css"
 
 function MainPg() {
   return (
-    <div>
+    <div className="mainContainer">
       <Profile />
     </div>
   )

@@ -33,7 +33,7 @@ class Avatar extends Component {
 
     return(
       <div className="avatarCard">
-        <div>
+         <div className="imgWrapper">
           <img className="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/330px-Spongebob-squarepants.svg.png" alt="Card cap" />
           <div className="card-body">
             <h5 className="card-title">Good {`${timeOfDay}`}, {`${firstName}`}!</h5>
