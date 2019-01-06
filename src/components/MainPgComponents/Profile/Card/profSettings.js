@@ -50,7 +50,7 @@ class ProfSetModal extends React.Component{
           // If animating more than one child, each needs a `key`
           <Shade key="shade" className="shade" />,
           <Modalz key="modalz" className="modalz">
-           <p>Please Login Below:</p>
+           <p>Profile Settings</p>
             {/* insertion of login form: */}
           <form action="/">
             <div className="form-group">
