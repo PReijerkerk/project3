@@ -25,7 +25,7 @@ function About() {
                     </ul>
                   </div>
                   <h1 className="name">Jeremy Brown</h1>
-                  <p>Created and designed all front end aspects of the webpage</p>
+                  <p>Don't ask him about Bitcoin</p>
                 </div>
                 <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile2">
                   <div className="img-box">
@@ -36,7 +36,7 @@ function About() {
                     </ul>
                   </div>
                   <h1 className="name">Jared Spears</h1>
-                  <p>Created and designed all front end aspects of the webpage</p>
+                  <p>DBZ anyone?</p>
                 </div>
             </div>
             {/*Back End Guys*/}
@@ -51,7 +51,7 @@ function About() {
                     </ul>
                   </div>
                   <h1 className="name">Taylor Lane</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p>He'll talk your ear off</p>
                 </div>
                 <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile2">
                   <div className="img-box">
@@ -62,7 +62,7 @@ function About() {
                     </ul>
                   </div>
                   <h1 className="name">Dan DiLoreto</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p>Blacks out after two beers</p>
                 </div>
             </div>
             {/*Project Manager/Floater*/}
@@ -77,7 +77,7 @@ function About() {
                     </ul>
                   </div>
                   <h2 className="name">Peter Reijerkerk</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p>Isn't he cute?!</p>
                 </div>
               </div>
             </div>
