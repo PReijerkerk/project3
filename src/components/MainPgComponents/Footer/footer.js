@@ -4,11 +4,17 @@ import './Footer.css'
 
 const Footer = () => {
   return ( 
-    <footer className="footer">
-      <div className="container">
-        <span className="text-muted">Trophy Case Doth End Here #footer</span>
-      </div>
-    </footer>
+    // <footer classNameName="footer">
+    //   <div classNameName="container">
+    //     <span classNameName="text-muted">Trophy Case Doth End Here #footer</span>
+    //   </div>
+    // </footer>
+  
+    <footer className="page-footer font-small blue pt-4">
+        <div className="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        </div>
+  </footer>
    );
 }
  
