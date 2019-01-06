@@ -1,7 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Feature used:
-- Material UI
+- Bootstrap 4
+- Pose JS
 - API used: 
 - Passport user Authentication
 
