@@ -13,7 +13,7 @@ function About() {
             <div className="col-lg-12">
               <h1 className="description"><strong>MEET THE ALLSTARS</strong></h1>
               {/*Front End Guys*/}
-              <h4>Front End Developers - Website Design and Effects</h4>
+              <h4 className="aboutTitles">Front End Developers - Website Design and Effects</h4>
               <div className="row pt-md">
                 <br/>
                 <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile1">
@@ -40,7 +40,7 @@ function About() {
                 </div>
             </div>
             {/*Back End Guys*/}
-            <h4>Back End - Website Functionality and Databases</h4>
+            <h4 className="aboutTitles">Back End - Website Functionality and Databases</h4>
             <div className="row pt-md">
                 <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile1">
                   <div className="img-box">
@@ -66,7 +66,7 @@ function About() {
                 </div>
             </div>
             {/*Project Manager/Floater*/}
-            <h4>Project Manager/Floater</h4>
+            <h4 className="aboutTitles">Project Manager/Floater</h4>
             <div className="row pt-md">
                 <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile1">
                   <div className="img-box">

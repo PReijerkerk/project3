@@ -1,9 +1,6 @@
-body{
-    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
-}
 .contact-form{
     background: #fff;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
     width: 70%;
 }
@@ -22,11 +19,11 @@ body{
 .contact-image img{
     border-radius: 6rem;
     width: 11%;
-    margin-top: 10;
-    transform: rotate(29deg);
+    margin-top: 10px;
+    /* transform: rotate(29deg); */
 }
 .contact-form form{
-    padding: 14%;
+    padding: 7%;
 }
 .contact-form form .row{
     margin-bottom: -7%;
@@ -39,10 +36,10 @@ body{
 }
 
 h4 {
-    margin-bottom: 8%;
     text-align: center;
     color: #0062cc;
 }
+
 .contact-form .btnContact {
     width: 50%;
     border: none;
