@@ -2,14 +2,42 @@
 body{
     font-family: 'Quicksand', sans-serif;
 }
+
+.fa {
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #008CBA;
+  }
+
 .team{
     padding:75px 0;
 }
+
 .container {
     background-color: #011A42;
     color: beige;
     padding: 30px;
 }
+
 h6.description{
 	font-weight: bold;
 	letter-spacing: 2px;
@@ -18,11 +46,20 @@ h6.description{
 	padding-bottom: 5px;
 }
 
+p {
+	color: beige;
+}
+
+.img-box:hover .overlay {
+	opacity: 1;
+}
+
 .name {
 	color: teal;
-	font-family: 'Timmana', sans-serif;
-	display: inline;
+	font-family: 'Changa', sans-serif;
+	width: 300px;
 }
+
 .description {
 	color: beige;
 	font-family: 'Changa', sans-serif;
@@ -48,11 +85,13 @@ h6.description{
 	font-size: 20px;
 	margin:10px 0 0 0;
 }
+
 .profile h2{
 	font-size: 14px;
 	font-weight: lighter;
 	margin-top: 5px;
 }
+
 .profile .img-box{
 	opacity: 1;
 	display: block;
@@ -69,6 +108,11 @@ h6.description{
 	top: 0;
 	bottom: 0;
 }
+
+.img-box {
+	position: relative;
+  	width: 50%;
+}
 .img-box ul{
 	position: absolute;
 	z-index: 2;
@@ -80,55 +124,57 @@ h6.description{
 	margin:0px;
 	opacity: 0;
 }
-.profile .img-box:after, .img-box ul, .img-box ul li{
-	-webkit-transition: all 0.5s ease-in-out 0s;
-    -moz-transition: all 0.5s ease-in-out 0s;
-    transition: all 0.5s ease-in-out 0s;
-}
+
 .img-box ul i{
 	font-size: 20px;
 	letter-spacing: 10px;
 }
+
 .img-box ul li{
-	width: 30px;
-    height: 30px;
+	width: 60px;
+    height: 60px;
     text-align: center;
-    border: 1px solid #88C425;
+    border: 2px solid orange;
     margin: 2px;
     padding: 5px;
 	display: inline-block;
 }
+
 .img-box a{
 	color:#fff;
 }
+
 .img-box:hover:after{
 	opacity: 1;
+
 }
 .img-box:hover ul{
 	opacity: 1;
 }
+
 .img-box ul a{
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	-moz-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 }
+
 .img-box a:hover li{
 	border-color: #fff;
-	color: #88C425;
+	color: orange;
 }
+
 a{
-    color:#88C425;
+    color:orange;
 }
-a:hover{
-    text-decoration:none;
-    color:#519548;
-}
-i.red{
-    color:beige;
+
+
+i{
+	padding-left: 10px;
 }
 
 .aboutPic {
     width: 400px;
     height: 400px;
-    border: solid 5px white;
+	border: solid 5px white;
+	display: block;
 }
