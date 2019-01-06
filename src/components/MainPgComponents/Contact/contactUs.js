@@ -9,7 +9,8 @@ function ContactUs() {
           <img src="http://corrupteddevelopment.com/wp-content/uploads/2011/10/3d-email-icon-e1318315864246.jpg" alt="rocket_contact"/>
       </div>
       <form method="post">
-          <h3>Drop Us a Message</h3>
+          <h3><strong>Drop Us a Message</strong></h3>
+          <h4>We would love to hear from you</h4>
           <div className="row">
               <div className="col-md-6">
                   <div className="form-group">
@@ -27,7 +28,7 @@ function ContactUs() {
               </div>
               <div className="col-md-6">
                   <div className="form-group">
-                      <textarea name="txtMsg" className="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                      <textarea name="txtMsg" className="form-control" id="textarea" placeholder="Your Message *"></textarea>
                   </div>
               </div>
           </div>
