@@ -35,20 +35,20 @@ class Card extends Component {
                 in all their glory!
               </p>
           </div>
-            <div className="card-footer bg-dark border-success">
+            <div className="card-footer bg-dark">
         
         {/* buttons for login or sign up 
             Currently Not working in the onClick Function within btn element - it does work 
             if you drag out <LoginForm/> and place it between the open/closing tags of btn - 
             the issues then is that it is always rendered */}
-        <button type="button" className="btn btn-outline-success" onClick= {()=>(
+        <button type="button" className="btn" onClick= {()=>(
            this.setState({login:true, createAcct:false})
           )}
         >   
          Login
         </button>
         
-        <button type="button" className="btn btn-outline-secondary" onClick= {()=>(
+        <button type="button" className="btn" onClick= {()=>(
           this.setState({createAcct:true, login:false})
           )}>
         SignUp
