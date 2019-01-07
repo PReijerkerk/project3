@@ -41,9 +41,6 @@ class Avatar extends Component {
           <div className="card-body">
             <h5 className="card-title">Good {`${timeOfDay}`}, {`${firstName}`}!</h5>
             <p className="card-text"></p>
-            <button className="collection-btn" onClick ={()=>(
-            this.setState({collectionModal:true, profileSetting:false})
-              )}>Add A New Collection</button>
             <button 
             className="btn btn-primary" onClick= {()=>(
               this.setState({profileSetting:true, collectionModal:false})

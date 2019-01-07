@@ -6,3 +6,12 @@
     background-color: beige;
     color: #033469;
 }
+
+.collection-btn {
+    float: right;
+}
+
+.card-header {
+    font-size: 30px;
+    font-family: Amaranth;
+}
