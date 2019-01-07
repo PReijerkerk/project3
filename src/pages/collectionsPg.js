@@ -1,6 +1,7 @@
 import React from 'react'
 import Collections from '../components/CollectionsPgComponents/Container/container'
 import '../components/CollectionsPgComponents/Container/collectionsContainer.css'
+import Footer from '../components/MainPgComponents/Footer/footer'
 
 // import React, { Component } from 'react';
 // import API from '../utils/API';
@@ -29,9 +30,10 @@ import '../components/CollectionsPgComponents/Container/collectionsContainer.css
 
 function CollectionsPg() {
   return (
-    // <div className="collectionsContainer">
+    <div className="collectionsContainer">
       <Collections />
-    // </div>
+      <Footer />
+    </div>
   )
 }
 
