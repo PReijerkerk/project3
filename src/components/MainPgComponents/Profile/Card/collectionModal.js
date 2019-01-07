@@ -30,7 +30,7 @@ const Shade = posed.div({
   exit: { opacity: 0 }
 });
 
-class ProfSetModal extends React.Component{
+class CollectionModal extends React.Component{
 
   state = { isVisible: false };
 
@@ -50,32 +50,24 @@ class ProfSetModal extends React.Component{
           // If animating more than one child, each needs a `key`
           <Shade key="shade" className="shade" />,
           <Modalz key="modalz" className="modalz">
-           <p>Profile Settings</p>
-            {/* insertion of login form: */}
+           <p>
+              Insert collection name and a short story 
+              explaining the items therin:
+            </p>
+            {/* insertion of new collections form: */}
           <form action="/">
-            <div className="form-group">
-              <label htmlFor="email">New Email address:</label>
-              <input type="email" className="form-control" id="newEmail"/>
+            <div className="input-group mb-3">
+            <div className="input-group-prepend">
+              <span className="input-group-text" id="collectionName">Name:</span>
             </div>
-            <div className="form-group">
-              <label htmlFor="pwd">New Password:</label>
-              <input type="password" className="form-control" id="newPwd"/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="collectorStatus">Collector Status:</label>
-              <select className="form-control" id="exampleFormControlSelect1">
-                <option> Vanilla Collector</option>
-                <option>Horder Wants to be Organized</option>
-                <option>Family History Collector</option>
-                <option>Collector with Bragging Rights</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="bio">Your Bio: </label>
-              <textarea className="form-control" id="bio" rows="3"></textarea>
-            </div>
+            <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          </div>
+          <div className="form-group">
+              <label htmlFor="collectionStory">Collection's Story: </label>
+              <textarea className="form-control" id="collectionStory" rows="3"></textarea>
+          </div>
             <button type="submit" className="btn btn-default">
-              Update Profile
+            Compile Collection
           </button>
           </form>
           </Modalz>
@@ -85,4 +77,4 @@ class ProfSetModal extends React.Component{
   }
 }
 
-export default ProfSetModal;
+export default CollectionModal;

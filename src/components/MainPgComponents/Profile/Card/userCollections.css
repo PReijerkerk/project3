@@ -7,10 +7,11 @@
     color: #033469;
 }
 
-
-.card-body {
-    
+.collection-btn {
+    float: right;
 }
 
-.profile-card {
+.card-header {
+    font-size: 30px;
+    font-family: Amaranth;
 }
