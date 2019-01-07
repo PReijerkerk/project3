@@ -36,16 +36,16 @@ function Carousel() {
                             <div className="carousel-item">
                                 <div className="row">
                                     <div className="col-md-3">
-                                            <img src="http://placehold.it/250x250" alt="Image" />
+                                            <img src="http://placehold.it/250x250" alt="item1" />
                                     </div>
                                     <div className="col-md-3">
-                                            <img src="http://placehold.it/250x250" alt="Image" />
+                                            <img src="http://placehold.it/250x250" alt="item2" />
                                     </div>
                                     <div className="col-md-3">
-                                            <img src="http://placehold.it/250x250" alt="Image" />
+                                            <img src="http://placehold.it/250x250" alt="item3" />
                                     </div>
                                     <div className="col-md-3">
-                                            <img src="http://placehold.it/250x250" alt="Image" />
+                                            <img src="http://placehold.it/250x250" alt="item4" />
                                     </div>
                                 </div>
                                 

@@ -1,6 +1,6 @@
 import React from 'react';
 import About from '../components/MainPgComponents/About/about'
-import Footer from '../components/MainPgComponents/Footer/footer'
+// import Footer from '../components/MainPgComponents/Footer/footer'
 
 function AboutUs() {
   return (
