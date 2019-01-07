@@ -6,6 +6,10 @@
   line-height: 60px;
   background-color: #011A42;
   color: white;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 .container {
   padding-right: 15px;
