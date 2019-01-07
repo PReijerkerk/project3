@@ -5,7 +5,7 @@ const collectionSchema = new Schema({
   name: { type: String, required: true },
   notes: String,
   date: { type: Date, default: Date.now },
-  user: String,
+  user: String, 
 });
 
 const Collection = mongoose.model("Collection", collectionSchema);
