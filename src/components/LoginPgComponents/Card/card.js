@@ -29,10 +29,10 @@ class Card extends Component {
           <div className="card-body text-success">
             <h5 className="card-title">Who We Are:</h5>
               <p className="card-text"> Our Telos is to compile user collections! 
-                We want your hobbies & passtimes to be conveniently accessible for 
-                you. That said, we pride ourselves in top tier data-storage 
-                and an inviting user experience that will display what we call your "Trophy Case" 
-                in all its glory!
+                We want your hobbies and pastimes to be conveniently accessible for 
+                you. That said, we pride ourselves in providing top-tier data storage 
+                and an inviting user experience that will display your "Trophy Case" of collections
+                in all their glory!
               </p>
           </div>
             <div className="card-footer bg-dark border-success">
