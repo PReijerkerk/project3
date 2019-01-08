@@ -3,6 +3,7 @@ const db = require("../database/models");
 //defining methods for the Collections collection
 module.exports = {
     findAll: function(req, res) {
+        console.log("finding all")
         db.Case
             .find(req.query)
             .sort({date: -1})

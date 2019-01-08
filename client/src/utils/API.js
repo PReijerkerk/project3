@@ -2,29 +2,22 @@
 import axios from "axios";
 
 export default {
+    // Get All collections -- not user specific
     getAllCollections: function() {
         console.log("call recieved");
         return axios.get("/api/collections")
     },
+    //Get collection by ID
+    getCollectionById: function(id) {
+        return axios.get("/api/collections/" + id)
+    },
 
-    // Get User collections
-    getUserData: function(user) {
-        return axios.get("/api/collections/" + user)
-    },
-    //  Get specific User collection 
-    getUserCollection: function( user, collId) {
-        return axios.get("/api/collections/" + collId);
-    },
-    // Get collection Item
-    getCollectionObj: function (user, collId, objId) {
-        return axios.get("/api/" + user +"/collections/" + collId + "/" + objId);
-    },
-    // Deletes the collection with the given collection id
-    deleteCollection: function(user, collId) {
-    return axios.delete("/api/" + user +"/collections/" + collId);
-    },
+    deleteCollection: function(id) {
+        return axios.delete("/api/collections/" + id);
+      },
     // Posts a collection to the DB uder the user ID
     saveCollection: function(collectionData) {
+        console.log("post call recieved")
         return axios.post("/api/collections", collectionData);
     },
 };

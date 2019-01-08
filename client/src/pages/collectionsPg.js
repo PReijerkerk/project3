@@ -42,7 +42,9 @@ class CollectionPg extends Component {
       API.saveCollection({
         name: this.state.name,
         story: this.state.story,
-        user: this.state.user
+        user: this.state.user,
+        items: [],
+        date: new Date(Date.now())
       })
         .then(res => this.loadTrophyCase())
         .catch(err => console.log(err));
