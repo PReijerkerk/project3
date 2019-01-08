@@ -47,7 +47,7 @@ function About() {
                     <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10247812_10202330084999010_4361321945622106678_n.jpg?_nc_cat=103&_nc_ht=scontent-iad3-1.xx&oh=c5b7b4aa92574f546afa3f2b02e1b749&oe=5CCE6DDF" className="img-responsive aboutPic" alt="TL"/>
                     <ul className="overlay">
                       <a href="https://github.com/tblane88"><li><i className="fa fa-github"></i></li></a>
-                      <a href="#"><li><i className="fa fa-linkedin"></i></li></a>
+                      <a href="https://www.linkedin.com/in/taylor-lane-21425954/"><li><i className="fa fa-linkedin"></i></li></a>
                     </ul>
                   </div>
                   <h1 className="name">Taylor Lane</h1>
