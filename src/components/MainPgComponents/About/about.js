@@ -70,7 +70,7 @@ function About() {
             <div className="row pt-md">
                 <div className="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile1">
                   <div className="img-box">
-                    <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/26168857_10156110542959515_3878801804154659300_n.jpg?_nc_cat=101&_nc_ht=scontent-iad3-1.xx&oh=7b45a06ee54f94fbe43f0987640ae610&oe=5CC27AD8" className="img-responsive aboutPic" alt="PR"/>
+                    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/49077849_10157072338089515_6324799866933346304_n.jpg?_nc_cat=103&_nc_ht=scontent-atl3-1.xx&oh=e8f6332efb26914d2e6ed2fdfbdd6280&oe=5C8D6AE3" className="img-responsive aboutPic" alt="PR"/>
                     <ul className="overlay">
                       <a href="https://github.com/PReijerkerk"><li><i className="fa fa-github"></i></li></a>
                       <a href="https://www.linkedin.com/in/peter-reijerkerk-13a51a102/"><li><i className="fa fa-linkedin"></i></li></a>
