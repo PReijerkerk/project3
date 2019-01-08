@@ -1,19 +1,14 @@
-import  React, { Component } from 'react'
-import './container.css'
+import React from 'react';
+import './collections.css'
 
 // this component is missleading in it's labeling I suggest this file/component container
 //be changed to TrophyCase or Collection
-class Container extends Component {
-  
-  state={
-    collection: []
-  }
-
-  render(){
+function Container() {
   return(
         <div className="collectionContainer">
-             <table className="table">
-            <thead className="thead-light">
+            <div className="card-header"><strong>Collection Title</strong></div>
+            <table className="table">
+            <thead className="thead-dark">
                 <tr>
                 <th scope="col"></th>
                 <th scope="col">collection col 1</th>
@@ -23,19 +18,19 @@ class Container extends Component {
             </thead>
             <tbody>
                 <tr>
-                <th scope="row">Shelf 1</th>
+                <th scope="row">1</th>
                 <td>item 1</td>
                 <td>item 2</td>
                 <td>item 3</td>
                 </tr>
                 <tr>
-                <th scope="row">Shelf 2</th>
+                <th scope="row">2</th>
                 <td>item 1</td>
                 <td>item 2</td>
                 <td>item 3</td>
                 </tr>
                 <tr>
-                <th scope="row">Shelf 3</th>
+                <th scope="row">3</th>
                 <td>item 1</td>
                 <td>item 2</td>
                 <td>item 3</td>
@@ -44,7 +39,6 @@ class Container extends Component {
           </table>
         </div>
   )
-}
 }
 
 export default Container; 
