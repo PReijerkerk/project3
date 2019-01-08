@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 //import CreateAcctForm from '../CreateAcctForm/createAcctForm'
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
-import API from '../../../utils/API';
+import TCAPI from '../../../utils/TCAPI';
 
 const logout = () => {
   console.log('logout') // eslint-disable-line
@@ -12,13 +12,13 @@ const logout = () => {
 }
 
 let isUserInDB = (response) => {
-  if (API.getUserRecord(response.profileObj.googleId)) {
+  if (TCAPI.getUserRecord(response.profileObj.googleId)) {
       sessionStorage.setItem("username", response.profileObj.name);
       sessionStorage.setItem("email", response.profileObj.email);
-      API.getUsersSavedRecipes(response.profileObj.googleId);
+      TCAPI.getUserCollection(response.profileObj.googleId);
   }  
   else {
-      API.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
+      TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
       sessionStorage.setItem("username", response.profileObj.name);
       sessionStorage.setItem("email", response.profileObj.email);
   }
@@ -84,7 +84,7 @@ class Card extends Component {
 
         {/* {this.modalRendering()} */}
         <GoogleLogin
-                clientId="219205541710-tbgv10kbpl60g72od59iu9t68aaiu8e3.apps.googleusercontent.com"
+                clientId=""
                 buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
