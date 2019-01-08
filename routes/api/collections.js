@@ -4,15 +4,15 @@ const collectionController = require("../../controllers/collectionController");
 
 // Matches with "/api/collections"
 router.route("/")
-  .get(userController.findAll)
-  .post(userController.create);
+  .get()
+  .post();
 
 // Matches with "/api/user/:id"
 router
   .route("/:id")
-  .get(userController.findById)
-  .get(collectionController.findAll)
-  .put(userController.update)
-  .delete(userController.remove);
+  .get()
+  .get()
+  .put()
+  .delete();
 
 module.exports = router;

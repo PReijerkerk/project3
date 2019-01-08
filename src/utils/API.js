@@ -4,11 +4,11 @@ import axios from "axios";
 export default {
     // Get User collections
     getUserData: function(user) {
-        return axios.get("/api/" + user +"/collections")
+        return axios.get("/api/collections/" + user)
     },
     //  Get specific User collection 
-    getUserCollection: function(user, collId) {
-        return axios.get("/api/" + user +"/collections/" + collId);
+    getUserCollection: function( user, collId) {
+        return axios.get("/api/collections/" + collId);
     },
     // Get collection Item
     getCollectionObj: function (user, collId, objId) {
