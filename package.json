@@ -24,12 +24,14 @@
     "url": "https://github.com/PReijerkerk/project3/issues"
   },
   "homepage": "https://github.com/PReijerkerk/project3#readme",
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
+  "devDependencies": {
     "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.4",
     "if-env": "^1.0.4",
-    "mongoose": "^5.4.2",
-    "nodemon": "^1.18.9"
+    "mongoose": "^5.4.2"
   }
 }
