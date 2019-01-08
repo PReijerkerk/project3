@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../database/models");
 
 //defining methods for the Collections collection
 module.exports = {
@@ -34,8 +34,4 @@ module.exports = {
             .then(dbModel=> res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }
-    
-
-
-
 }

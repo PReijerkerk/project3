@@ -2,6 +2,11 @@
 import axios from "axios";
 
 export default {
+    getAllCollections: function() {
+        console.log("call recieved");
+        return axios.get("/api/collections")
+    },
+
     // Get User collections
     getUserData: function(user) {
         return axios.get("/api/collections/" + user)
@@ -19,7 +24,7 @@ export default {
     return axios.delete("/api/" + user +"/collections/" + collId);
     },
     // Posts a collection to the DB uder the user ID
-    saveCollection: function(user, collectionData) {
-        return axios.post("/api/" + user +"/collections", collectionData);
+    saveCollection: function(collectionData) {
+        return axios.post("/api/collections", collectionData);
     },
 };
