@@ -1,27 +1,55 @@
 import React, { Component } from 'react';
-import LoginForm from '../LoginForm/loginForm'
-import CreateAcctForm from '../CreateAcctForm/createAcctForm'
+//import LoginForm from '../LoginForm/loginForm'
+//import CreateAcctForm from '../CreateAcctForm/createAcctForm'
 import './card.css';
+import { GoogleLogout, GoogleLogin } from 'react-google-login';
+import TCAPI from '../../../utils/TCAPI';
+
+const logout = () => {
+  console.log('logout') // eslint-disable-line
+  sessionStorage.clear();
+  window.location.reload();
+}
+
+let isUserInDB = (response) => {
+  if (TCAPI.getUserRecord(response.profileObj.googleId)) {
+      sessionStorage.setItem("username", response.profileObj.name);
+      sessionStorage.setItem("email", response.profileObj.email);
+      TCAPI.getUserCollection(response.profileObj.googleId);
+  }  
+  else {
+      TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
+      sessionStorage.setItem("username", response.profileObj.name);
+      sessionStorage.setItem("email", response.profileObj.email);
+  }
+}
+
+
 
 
 class Card extends Component {
   
-  state ={
-    login : false,
-    createAcct : false
-  }
+  // state ={
+  //   login : false,
+  //   createAcct : false
+  // }
 
-  // not rendering any modal when page first loads 
-  modalRendering = () => {
-      if (this.state.login) {
-        return <LoginForm />;
-      } else if (this.state.createAcct) {
-        return <CreateAcctForm/>;
-    }
-  }
+  // // not rendering any modal when page first loads 
+  // modalRendering = () => {
+  //     if (this.state.login) {
+  //       return <LoginForm />;
+  //     } else if (this.state.createAcct) {
+  //       return <CreateAcctForm/>;
+  //   }
+  // }
 
   render(){
- 
+    const responseGoogle = (response) => {
+      console.log(response);
+      isUserInDB(response);
+      window.location.reload(); // This reload is here so that once logged in, the user doesn't have to manually refresh to see their data appear in the app.
+    }
+
   return (
     <div>
       <div className="card border-success mb-3 text-center">
@@ -41,7 +69,7 @@ class Card extends Component {
             Currently Not working in the onClick Function within btn element - it does work 
             if you drag out <LoginForm/> and place it between the open/closing tags of btn - 
             the issues then is that it is always rendered */}
-        <button type="button" className="btn" onClick= {()=>(
+        {/* <button type="button" className="btn" onClick= {()=>(
            this.setState({login:true, createAcct:false})
           )}
         >   
@@ -52,9 +80,20 @@ class Card extends Component {
           this.setState({createAcct:true, login:false})
           )}>
         SignUp
-        </button>
+        </button> */}
 
-        {this.modalRendering()}
+        {/* {this.modalRendering()} */}
+        <GoogleLogin
+                clientId=""
+                buttonText="Login"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                />
+            <GoogleLogout
+                buttonText="Logout"
+                onLogoutSuccess={logout}
+            >
+            </GoogleLogout>
    </div>
   </div>
 </div>
