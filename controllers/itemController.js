@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../database/models");
 
 //defining methods for the Item collection
 module.exports = {
