@@ -1,5 +1,5 @@
 module.exports = {
     User: require("./user"),
-    Collection: require("./collection"),
+    Case: require("./case"),
     Item: require("./item")
   };

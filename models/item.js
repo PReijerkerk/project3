@@ -15,8 +15,8 @@ const itemSchema = new Schema({
     note: {
         type: String
     },
-    collection: {
-        type: mongoose.Schema.ObjectId, ref: 'Collection',
+    case: {
+        type: mongoose.Schema.ObjectId, ref: 'Case',
         required: true
     },
     user: {

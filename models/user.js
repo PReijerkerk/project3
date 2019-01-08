@@ -8,9 +8,9 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        validate: {
-            isUsername: true
-        }
+        // validate: {
+        //     isUsername: true
+        // }
     },
     password: {
         type: String,
