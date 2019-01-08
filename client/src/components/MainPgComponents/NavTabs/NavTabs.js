@@ -16,37 +16,37 @@ function NavTabs() {
         </li>
         <li className='nav-item'>
           <Link
-            to='/LoginPg'
-            className={window.location.pathname === '/LoginPg' ? 'nav-link active' : 'nav-link'}
+            to='/'
+            className={window.location.pathname === '/' ? 'nav-link active' : 'nav-link'}
           >
             Login
           </Link>
         </li>
         <li className='nav-item'>
-          <Link to='/' className={window.location.pathname === '/' ? 'nav-link active' : 'nav-link'}>
+          <Link to='/profile' className={window.location.pathname === '/profile' ? 'nav-link active' : 'nav-link'}>
             Home
           </Link>
         </li>
         <li className='nav-item'>
           <Link
-            to='/CollectionsPg'
-            className={window.location.pathname === '/CollectionsPg' ? 'nav-link active' : 'nav-link'}
+            to='/collectionsPg'
+            className={window.location.pathname === '/collectionsPg' ? 'nav-link active' : 'nav-link'}
           >
             Collections
           </Link>
         </li>
         <li className='nav-item'>
           <Link
-            to='/AboutUs'
-            className={window.location.pathname === '/AboutUs' ? 'nav-link active' : 'nav-link'}
+            to='/aboutUs'
+            className={window.location.pathname === '/aboutUs' ? 'nav-link active' : 'nav-link'}
           >
             About Us
           </Link>
         </li>
         <li className='nav-item'>
           <Link
-            to='/Contact'
-            className={window.location.pathname === '/Contact' ? 'nav-link active' : 'nav-link'}
+            to='/contact'
+            className={window.location.pathname === '/contact' ? 'nav-link active' : 'nav-link'}
           >
             Contact
           </Link>

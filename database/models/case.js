@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const collectionSchema = new Schema({
+const caseSchema = new Schema({
 name: {
     type: String,
     required: true
@@ -23,6 +23,6 @@ user: {
 }
 })
 
-const Collection = mongoose.model("Collection", collectionSchema);
+const Case = mongoose.model("Case", caseSchema);
 
-module.exports = Collection;
+module.exports = Case;
