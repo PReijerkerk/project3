@@ -42,10 +42,11 @@ class CollectionModal extends React.Component{
   };
 
   componentDidMount() {
-    this.loadTrophyCase() 
-    this.setState({
-      isVisible: !this.state.isVisible
-    });
+      this.setState({
+        
+        isVisible: !this.state.isVisible
+      });
+
   }
 
   loadTrophyCase = () => {
@@ -115,24 +116,12 @@ class CollectionModal extends React.Component{
             {/* input the STORY into MONGO */}
             <div className="form-group">
               <label htmlFor="collectionStory">Collection's Story: </label>
-              <textarea 
-                className="form-control" 
-                id="collectionStory" 
-                rows="3"
-                value={this.state.story}
-                onChange={this.handleInputChange}
-                name="story"
-                placeholder="Tell us what your collection (required)"
-              />
-            </div>
-              <button 
-                type="submit" 
-                className="btn btn-default" 
-                to='/collectionsPg'
-                onClick={this.handleFormSubmit}
-              >
-              Compile Collection
-            </button>
+              <textarea className="form-control" id="collectionStory" rows="3"></textarea>
+          </div>
+            <button type="submit" className="btn btn-default" onClick={this.handleFormSubmit}>
+            Compile Collection
+          </button>
+
           </form>
           </Modalz>
         ]}

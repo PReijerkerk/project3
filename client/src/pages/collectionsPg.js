@@ -4,17 +4,19 @@ import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem'
 import '../components/CollectionsPgComponents/Container/collectionsContainer.css'
 import Footer from '../components/MainPgComponents/Footer/footer'
 import API from "../utils/API";
+import { List, ListItem } from "../components/CollectionsPgComponents/List";
+import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/Form";
+
 
 
 class CollectionPg extends Component {
-  state = { }
-
   state = { 
     case: [],
     name: "",
     story: "",
     user: "",
     items: []
+
   }
 
   componentDidMount() {
@@ -54,24 +56,93 @@ class CollectionPg extends Component {
   render() { 
     return ( 
       <div>
-        <Collections/>
-        {this.state.case.length ? (
-              <div>
-                {this.state.case.map(collection => {
-                  return (
-                    <p key={collection._id}>
+        <div className = 'container'>
+         <form>
+              <Input
+                value={this.state.name}
+                onChange={this.handleInputChange}
+                name="name"
+                placeholder="Collection Name (required)"
+              />
+              <Input
+                value={this.state.user}
+                onChange={this.handleInputChange}
+                name="user"
+                placeholder="user (required)"
+              />
+              <TextArea
+                value={this.state.story}
+                onChange={this.handleInputChange}
+                name="story"
+                placeholder="What is it (required)"
+              />
+              <FormBtn
+                disabled={!(this.state.user && this.state.name)}
+                onClick={this.handleFormSubmit}
+              >
+                Submit
+              </FormBtn>
+            </form>
+            <br></br>
+            </div>
+
+        {/* <Collections/> */}
+        <hr></hr>
+        <div className = 'container'>
+    <div className="collectionContainer">
+      <table className="table collectionContainer">
+        <thead className="thead-light">
+          <tr>
+          <th scope="col">User Collections</th>
+          {/* <th scope="col">test</th>
+          <th scope="col">collection col 2</th>
+          <th scope="col">collection col 3</th> */}
+          </tr>
+        </thead>
+            {this.state.case.length? (
+            <tbody>
+              {this.state.case.map(collection => {
+                return (
+                  <tr>
+                    <td>
+                      {/* shelf list by collection id */}
+                    <div key={collection._id}>
                       <a href={"/collection/" + collection._id}>
+                        {/* Dan only listed collection name. We want to add collection.items */}
                         <strong>
-                          {collection.name} 
+                          {collection.name} Shelf
                         </strong>
                       </a>
-                    </p>
-                  );
-                })}
-              </div>
-            ) : (
-              <h3>No Results to Display</h3>
+                    </div>
+                    </td>
+
+
+               {/* not sure how to render this from the DB */}
+                    <td>
+                        added item will go here
+                    </td>
+                    <td>
+                        added item will go here
+                    </td>
+                    <td>
+                        added item will go here
+                    </td>
+                    <td>
+                        added item will go here
+                    </td>
+            
+                   
+                  </tr>
+                );
+              })}
+         </tbody>
+          ) : (
+            <tbody>No Results to Display </tbody> 
             )}
+      </table>
+    </div>
+  </div>
+
         <AddItem/>
         <Footer />
       </div>
