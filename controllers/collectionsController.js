@@ -12,7 +12,7 @@ module.exports = {
     },
     findById: function(req, res) {
         db.Case
-            .findById({userId: req.params.id})
+            .findById({_id: req.params.id})
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
