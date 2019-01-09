@@ -54,6 +54,7 @@ class CollectionPg extends Component {
   render() { 
     return ( 
       <div>
+        {/* User collection to be added to the db; this is Dan's form. We need the format below to go into addItemModal*/}
          <form>
               <Input
                 value={this.state.name}
@@ -80,13 +81,16 @@ class CollectionPg extends Component {
                 Submit
               </FormBtn>
             </form>
-        <Collections/>
+        {/* Our container component/shelfcase called "Collections" is where we want to display the code below*/}
+        <Collections>
+        {/*Here we get an array of the user's collections. We need to get this into the container component */}
         {this.state.case.length ? (
               <List>
                 {this.state.case.map(collection => {
                   return (
                     <ListItem key={collection._id}>
                       <a href={"/collection/" + collection._id}>
+                        {/* Dan only listed collection name. We want to add collection.items */}
                         <strong>
                           {collection.name} 
                         </strong>
@@ -98,6 +102,8 @@ class CollectionPg extends Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
+        </Collections>
+        {/* AddItem takes us to AddItemModal which is where we need to add value and onChange */}
         <AddItem/>
         <Footer />
       </div>

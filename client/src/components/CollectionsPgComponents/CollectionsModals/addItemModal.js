@@ -50,7 +50,7 @@ class AddItemModal extends React.Component{
           // If animating more than one child, each needs a `key`
           <Shade key="shade" className="shade" />,
           <Modalz key="modalz" className="modalz">
-           <p>Discribe what you are adding:</p>
+           <p>Describe what you are adding:</p>
            
           <form action="/CollectionsPg">
             <div className="input-group mb-3">
@@ -68,7 +68,7 @@ class AddItemModal extends React.Component{
               <select className="form-control" id="collectionRoute">
                 {/* ideally option will have a call to collection object that 
                 will display the list of collections with a functional call */}
-                <option> collection A </option>
+                <option>collection A </option>
                 <option>collection B </option>
                 <option>collection C </option>
               </select>

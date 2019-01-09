@@ -84,12 +84,14 @@ class Card extends Component {
 
         {/* {this.modalRendering()} */}
         <GoogleLogin
+                className="btn"
                 clientId=""
                 buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
                 />
             <GoogleLogout
+                className="btn"
                 buttonText="Logout"
                 onLogoutSuccess={logout}
             >

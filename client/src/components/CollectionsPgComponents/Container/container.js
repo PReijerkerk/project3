@@ -16,9 +16,9 @@ class Container extends Component {
             <thead className="thead-light">
                 <tr>
                 <th scope="col"></th>
-                <th scope="col">collection col 1</th>
-                <th scope="col">collection col 2</th>
-                <th scope="col">collection col 3</th>
+                <th value="0" scope="col">collection col 1</th>
+                <th value="1" scope="col">collection col 2</th>
+                <th value="2" scope="col">collection col 3</th>
                 </tr>
             </thead>
             <tbody>
