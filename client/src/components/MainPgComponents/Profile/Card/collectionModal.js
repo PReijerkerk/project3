@@ -5,7 +5,7 @@
 
 import React from 'react';
 import posed, { PoseGroup } from 'react-pose';
-
+import API from "../../../../utils/API";
 
 const Modalz = posed.div({
   enter: {
@@ -32,14 +32,52 @@ const Shade = posed.div({
 
 class CollectionModal extends React.Component{
 
-  state = { isVisible: false };
+  state = { 
+    isVisible: false,
+    case: [],
+    name: "",
+    story: "",
+    user: "",
+    items: []
+  };
 
   componentDidMount() {
       this.setState({
         
         isVisible: !this.state.isVisible
       });
+
   }
+
+  loadTrophyCase = () => {
+    API.getAllCollections()
+    .then(res =>
+        this.setState({case: res.data})
+    )
+    .catch(err => console.log(err));
+  }
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.name && this.state.user) {
+      API.saveCollection({
+        name: this.state.name,
+        story: this.state.story,
+        user: this.state.user,
+        items: [],
+        date: new Date(Date.now())
+      })
+      .then(res => this.loadTrophyCase())
+      .catch(err => console.log(err));
+  }
+};
 
   render() {
     const { isVisible } = this.state;
@@ -56,20 +94,34 @@ class CollectionModal extends React.Component{
               explaining the items therin:
             </p>
             {/* insertion of new collections form: */}
-          <form action="/">
+          <form action="/collectionsPg">
+            
+            {/* input the NAME into Mongo */}
             <div className="input-group mb-3">
-            <div className="input-group-prepend">
-              <span className="input-group-text" id="collectionName">Name:</span>
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="collectionName">Name:</span>
+              </div>
+              <input 
+                type="text" 
+                className="form-control" 
+                aria-label="Default" 
+                aria-describedby="inputGroup-sizing-default"
+                value={this.state.name}
+                onChange={this.handleInputChange}
+                name="name"
+                placeholder="Collection Name (required)"
+              />
             </div>
-            <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
-          </div>
-          <div className="form-group">
+
+            {/* input the STORY into MONGO */}
+            <div className="form-group">
               <label htmlFor="collectionStory">Collection's Story: </label>
               <textarea className="form-control" id="collectionStory" rows="3"></textarea>
           </div>
             <button type="submit" className="btn btn-default" onClick={this.handleFormSubmit}>
             Compile Collection
           </button>
+
           </form>
           </Modalz>
         ]}

@@ -15,6 +15,8 @@ class CollectionPg extends Component {
     name: "",
     story: "",
     user: "",
+    items: []
+
   }
 
   componentDidMount() {
@@ -140,6 +142,7 @@ class CollectionPg extends Component {
       </table>
     </div>
   </div>
+
         <AddItem/>
         <Footer />
       </div>

@@ -4,7 +4,7 @@ import './addItem.css'
 
 class AddItem extends Component {
   state = { 
-    add:false
+    add:false  
    }
   
   modalRendering = () => {

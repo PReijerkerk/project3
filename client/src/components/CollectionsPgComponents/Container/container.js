@@ -2,7 +2,6 @@ import  React, { Component } from 'react'
 import './container.css'
 import API from '../../../utils/API'
 
-
 // this component is missleading in its labeling I suggest this file/component container
 //be changed to TrophyCase or Collection
 class Container extends Component {
