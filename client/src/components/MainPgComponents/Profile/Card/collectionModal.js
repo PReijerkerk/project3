@@ -42,10 +42,10 @@ class CollectionModal extends React.Component{
   };
 
   componentDidMount() {
-      this.loadTrophyCase() 
-      this.setState({
-        isVisible: !this.state.isVisible
-      });
+    this.loadTrophyCase() 
+    this.setState({
+      isVisible: !this.state.isVisible
+    });
   }
 
   loadTrophyCase = () => {
@@ -55,6 +55,7 @@ class CollectionModal extends React.Component{
     )
     .catch(err => console.log(err));
   }
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -128,6 +129,7 @@ class CollectionModal extends React.Component{
                 type="submit" 
                 className="btn btn-default" 
                 to='/collectionsPg'
+                onClick={this.handleFormSubmit}
               >
               Compile Collection
             </button>
