@@ -43,7 +43,7 @@ class CollectionPg extends Component {
         name: this.state.name,
         story: this.state.story,
         user: this.state.user,
-        items: [],
+        items: [this.state.item1, this.state.item2],
         date: new Date(Date.now())
       })
         .then(res => this.loadTrophyCase())
@@ -88,9 +88,12 @@ class CollectionPg extends Component {
                     <ListItem key={collection._id}>
                       <a href={"/collection/" + collection._id}>
                         <strong>
-                          {collection.name} 
+                          {collection.name} and {collection.story}
                         </strong>
                       </a>
+                      <strong>{collection.items[0]}</strong>
+                      <strong>{collection.items[1]}</strong>
+                      <strong>{collection.items[2]}</strong>
                     </ListItem>
                   );
                 })}

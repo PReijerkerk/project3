@@ -14,21 +14,22 @@ const caseSeed = [
     name: "Music",
     story: "This is all my music stuff",
     date: new Date(Date.now()),
-    items: [],
-    user: "Dantheman"
+    items: ["item1", "item2", "item3"],
+    user: "Dantheman",
+    
   },
   {
     name: "Movies",
     story: "This is all my movie stuff",
     date: new Date(Date.now()),
-    items: [],
+    items: ["item1", "item2", "item3"],
     user: "Dantheman"
   },
   {
     name: "Cards",
     story: "This is all my cards",
     date: new Date(Date.now()),
-    items: [],
+    items: ["item1", "item2", "item3"],
     user: "Dantheman"
   },
 
