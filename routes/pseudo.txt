@@ -1,0 +1,18 @@
+user flow (capture)
+user goes to login by default 
+on login submit to user api routes 
+if not succesful should hit middle ware is authenticated and return to login page
+if login succesful it should return to "/{id}"
+
+/////////////////////
+
+post rout to database for new collections
+get rout to display on data
+button to open collection that leats to "api/collections/colletionID
+
+
+///////////////////////////////////
+
+need controllers dir for finding data across 2 tables
+users
+collections (user as key)

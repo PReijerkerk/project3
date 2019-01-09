@@ -1,7 +1,7 @@
 import  React, { Component } from 'react'
 import './container.css'
 
-// this component is missleading in it's labeling I suggest this file/component container
+// this component is missleading in its labeling I suggest this file/component container
 //be changed to TrophyCase or Collection
 class Container extends Component {
   

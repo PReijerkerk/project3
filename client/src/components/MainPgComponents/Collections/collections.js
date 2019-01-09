@@ -23,6 +23,5 @@ import './collections.css'
         </div>
     </div>
   )
-}
 
 export default Collections;
