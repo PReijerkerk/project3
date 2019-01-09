@@ -7,6 +7,15 @@ function MainPg() {
   return (
     <div className="mainContainer">
       <Profile />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <Footer />
     </div>
   )
