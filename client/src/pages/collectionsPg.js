@@ -14,6 +14,7 @@ class CollectionPg extends Component {
     name: "",
     story: "",
     user: "",
+    items: []
   }
 
   componentDidMount() {
