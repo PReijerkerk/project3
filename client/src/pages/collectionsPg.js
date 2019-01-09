@@ -55,6 +55,23 @@ class CollectionPg extends Component {
     return ( 
       <div>
         <Collections/>
+        {this.state.case.length ? (
+              <div>
+                {this.state.case.map(collection => {
+                  return (
+                    <p key={collection._id}>
+                      <a href={"/collection/" + collection._id}>
+                        <strong>
+                          {collection.name} 
+                        </strong>
+                      </a>
+                    </p>
+                  );
+                })}
+              </div>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
         <AddItem/>
         <Footer />
       </div>
