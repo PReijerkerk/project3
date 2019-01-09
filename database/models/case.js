@@ -15,10 +15,10 @@ date: {
     default: Date.now
 },
 items: [
-    {type: mongoose.Schema.ObjectId, ref: 'Item'}
+    
 ],
 user: {
-    type: mongoose.Schema.ObjectId, ref: 'User',
+    
     required: true
 }
 })
