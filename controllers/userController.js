@@ -1,4 +1,4 @@
-const db = require("../db/models");
+const db = require("../database/models");
 //defining methods for the User collection
 
 let userCollection = (req, res) => {

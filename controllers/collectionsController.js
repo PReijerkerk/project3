@@ -1,8 +1,9 @@
-const db = require("../models");
+const db = require("../database/models");
 
 //defining methods for the Collections collection
 module.exports = {
     findAll: function(req, res) {
+        console.log("finding all")
         db.Case
             .find(req.query)
             .sort({date: -1})
@@ -34,8 +35,4 @@ module.exports = {
             .then(dbModel=> res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }
-    
-
-
-
 }
