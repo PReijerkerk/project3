@@ -36,6 +36,7 @@ class CollectionModal extends React.Component{
 
   componentDidMount() {
       this.setState({
+        
         isVisible: !this.state.isVisible
       });
   }
@@ -66,7 +67,7 @@ class CollectionModal extends React.Component{
               <label htmlFor="collectionStory">Collection's Story: </label>
               <textarea className="form-control" id="collectionStory" rows="3"></textarea>
           </div>
-            <button type="submit" className="btn btn-default">
+            <button type="submit" className="btn btn-default" onClick={this.handleFormSubmit}>
             Compile Collection
           </button>
           </form>

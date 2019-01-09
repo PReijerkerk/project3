@@ -54,6 +54,7 @@ class CollectionPg extends Component {
   render() { 
     return ( 
       <div>
+        <div className = 'container'>
          <form>
               <Input
                 value={this.state.name}
@@ -80,24 +81,65 @@ class CollectionPg extends Component {
                 Submit
               </FormBtn>
             </form>
-        <Collections/>
-        {this.state.case.length ? (
-              <List>
-                {this.state.case.map(collection => {
-                  return (
-                    <ListItem key={collection._id}>
+            <br></br>
+            </div>
+
+        {/* <Collections/> */}
+        <hr></hr>
+        <div className = 'container'>
+    <div className="collectionContainer">
+      <table className="table collectionContainer">
+        <thead className="thead-light">
+          <tr>
+          <th scope="col">User Collections</th>
+          {/* <th scope="col">test</th>
+          <th scope="col">collection col 2</th>
+          <th scope="col">collection col 3</th> */}
+          </tr>
+        </thead>
+            {this.state.case.length? (
+            <tbody>
+              {this.state.case.map(collection => {
+                return (
+                  <tr>
+                    <td>
+                      {/* shelf list by collection id */}
+                    <div key={collection._id}>
                       <a href={"/collection/" + collection._id}>
+                        {/* Dan only listed collection name. We want to add collection.items */}
                         <strong>
-                          {collection.name} 
+                          {collection.name} Shelf
                         </strong>
                       </a>
-                    </ListItem>
-                  );
-                })}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
+                    </div>
+                    </td>
+
+
+               {/* not sure how to render this from the DB */}
+                    <td>
+                        added item will go here
+                    </td>
+                    <td>
+                        added item will go here
+                    </td>
+                    <td>
+                        added item will go here
+                    </td>
+                    <td>
+                        added item will go here
+                    </td>
+            
+                   
+                  </tr>
+                );
+              })}
+         </tbody>
+          ) : (
+            <tbody>No Results to Display </tbody> 
             )}
+      </table>
+    </div>
+  </div>
         <AddItem/>
         <Footer />
       </div>
