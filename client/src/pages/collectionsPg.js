@@ -3,6 +3,7 @@ import Collections from '../components/CollectionsPgComponents/Container/contain
 import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem'
 import '../components/CollectionsPgComponents/Container/collectionsContainer.css'
 import Footer from '../components/MainPgComponents/Footer/footer'
+import API from "../utils/API";
 
 
 class CollectionPg extends Component {
