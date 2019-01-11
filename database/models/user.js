@@ -21,6 +21,14 @@ const userSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    case:  [
+        {
+          // Store ObjectIds in the array
+          type: Schema.Types.ObjectId,
+          // The ObjectIds will refer to the ids in the Note model
+          ref: "Case"
+        }
+      ]
 });
 
 //Create model from Schema
