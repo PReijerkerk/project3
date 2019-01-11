@@ -2,9 +2,14 @@
 import axios from "axios";
 
 export default {
+
+    // Get all items from database 
+    getAllItems: function() {
+        console.log("call recieved");
+        return axios.get("/api/items")
+    },
     // Get All collections -- not user specific
     getAllCollections: function() {
-        console.log("call recieved");
         return axios.get("/api/collections")
     },
     //Get collection by ID

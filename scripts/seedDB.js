@@ -42,7 +42,7 @@ const caseSeed = [
 
 ];
 
-const itemSeed = [
+const itemsSeed = [
   {
     name: 'Bag of Potatoes',
     description: 'its a large bag of potatoes',
@@ -75,7 +75,7 @@ db.Case
 
 db.Items
   .remove({})
-  .then(() => db.Items.collection.insertMany(itemSeed))
+  .then(() => db.Items.collection.insertMany(itemsSeed))
   .then(data => {
     console.log(data.result.n + "items insertend into collections");
     process.exit(0);
