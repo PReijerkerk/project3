@@ -29,10 +29,11 @@
     "nodemon": "^1.18.9"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.2.4",
     "axios": "^0.18.0",
     "bcrypt-nodejs": "0.0.3",
     "express": "^4.16.4",
     "if-env": "^1.0.4",
-    "mongoose": "^5.4.2"
+    "mongoose": "^5.4.3"
   }
 }

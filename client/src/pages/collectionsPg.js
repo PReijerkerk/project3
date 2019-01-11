@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Collections from '../components/CollectionsPgComponents/Container/container'
+// import Collections from '../components/CollectionsPgComponents/Container/container'
 import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem'
 import '../components/CollectionsPgComponents/Container/collectionsContainer.css'
 import Footer from '../components/MainPgComponents/Footer/footer'
 import API from "../utils/API";
-import { List, ListItem } from "../components/CollectionsPgComponents/List";
+// import { List, ListItem } from "../components/CollectionsPgComponents/List";
 import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/Form";
 
 

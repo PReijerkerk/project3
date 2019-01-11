@@ -13,7 +13,16 @@
     <link href="https://fonts.googleapis.com/css?family=Changa:800|Timmana" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Icomoon Icon Fonts-->
-	  <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Glidejs CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide" rel="stylesheet">
+    <link href="https://unpkg.com/@glidejs/glide" rel="stylesheet">
+    <!-- Glidejs Required Core Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <!-- Glidejs Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    
+    
     <title>Trophy Case</title>
   </head>
   <body>
@@ -23,6 +32,11 @@
     <div id="root"></div>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script>
+      new Glide('.glide').mount()
+    </script>
         
   </body>
 </html>
