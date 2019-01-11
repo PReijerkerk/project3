@@ -34,19 +34,12 @@ class CollectionModal extends React.Component{
 
   state = { 
     isVisible: false,
-    case: [],
-    name: "",
-    story: "",
-    user: "",
-    items: []
   };
 
   componentDidMount() {
-      this.setState({
-        
-        isVisible: !this.state.isVisible
-      });
-
+    this.setState({
+      isVisible: !this.state.isVisible
+    });
   }
 
   loadTrophyCase = () => {
@@ -66,7 +59,8 @@ class CollectionModal extends React.Component{
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.name && this.state.user) {
+    console.log("submit request recieved")
+    if (this.state.name ) {
       API.saveCollection({
         name: this.state.name,
         story: this.state.story,
@@ -74,7 +68,10 @@ class CollectionModal extends React.Component{
         items: [],
         date: new Date(Date.now())
       })
-      .then(res => this.loadTrophyCase())
+      .then(res => {
+        console.log(res)
+        this.loadTrophyCase()
+      })
       .catch(err => console.log(err));
   }
 };

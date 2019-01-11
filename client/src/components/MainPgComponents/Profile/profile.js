@@ -13,7 +13,6 @@ import "./Card/profile.css"
 function Profile() {
   return (
     <div className="mainContainer">
-      
       <ProfileOverview />
       <Avatar />
       <UserCollections />
