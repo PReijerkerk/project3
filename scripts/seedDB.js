@@ -30,6 +30,13 @@ const caseSeed = [
     story: "This is all my cards",
     date: new Date(Date.now()),
     items: [],
+    user: "Notme"
+  },
+  {
+    name: "Random Things",
+    story: "This is all my other stuff",
+    date: new Date(Date.now()),
+    items: [],
     user: "Dantheman"
   },
 
@@ -37,21 +44,21 @@ const caseSeed = [
 
 const itemSeed = [
   {
-    name: '',
-    description: '',
+    name: 'Bag of Potatoes',
+    description: 'its a large bag of potatoes',
     price: 1,
-    note: '',
-    case: '',
-    user: '',
+    note: 'rather than fill out a form for each potato i decided to put all potatoes together in one bag',
+    case: 'random things',
+    user: 'Dantheman'
   },
 ];
 
 const userSeed = [
   {
-    username: '',
-    password: '',
+    username: 'Dantheman',
+    password: 'password',
     timestamp: new Date(Date.now()),
-  }
+  },
 ];
 
 db.Case
@@ -66,7 +73,7 @@ db.Case
     process.exit(1);
   });
 
-db.Item
+db.Items
   .remove({})
   .then(() => db.Items.collection.insertMany(itemSeed))
   .then(data => {
