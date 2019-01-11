@@ -12,7 +12,7 @@ module.exports = {
     },
     findById: function(req, res) {
         db.Case
-            .findById({userId: req.params.id})
+            .findById({_id: req.params.id})
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
@@ -23,10 +23,12 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
+        console.log(req.params)
+        console.log(req.body)
         db.Case
-            .findOneAndUpdate({_id: req.params.id}, req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+          .findByIdAndUpdate(req.params.id , req.body, {new: true} )
+          .then(dbModel => res.json(dbModel))
+          .catch(err => res.status(422).json(err));
     },
     remove: function(req, res) {
         db.Case

@@ -22,7 +22,7 @@ const caseSeed = [
     name: "Movies",
     story: "This is all my movie stuff",
     date: new Date(Date.now()),
-    items: ["item1", "item2", "item3"],
+    items: [],
     user: "Dantheman"
   },
   {

@@ -15,6 +15,7 @@ class CollectionPg extends Component {
     name: "",
     story: "",
     user: "",
+    items: []
   }
 
   componentDidMount() {
@@ -39,11 +40,26 @@ class CollectionPg extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.name && this.state.user) {
-      API.saveCollection({
+      API.createCollection({
         name: this.state.name,
         story: this.state.story,
         user: this.state.user,
         items: [this.state.item1, this.state.item2],
+        date: new Date(Date.now())
+      })
+        .then(res => this.loadTrophyCase())
+        .catch(err => console.log(err));
+    }
+  };
+
+  handleFormSubmitUpdate = event => {
+    event.preventDefault();
+    if (this.state.name && this.state.user) {
+      API.updateCollection({
+        name: this.state.name,
+        story: this.state.story,
+        user: this.state.user,
+        items: this.state.items,
         date: new Date(Date.now())
       })
         .then(res => this.loadTrophyCase())
