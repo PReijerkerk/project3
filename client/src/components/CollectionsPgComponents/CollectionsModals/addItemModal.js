@@ -87,7 +87,7 @@ class AddItemModal extends React.Component{
           // If animating more than one child, each needs a `key`
           <Shade key="shade" className="shade" />,
           <Modalz key="modalz" className="modalz">
-           <p>Discribe what you are adding:</p>
+           <p>Describe what you are adding:</p>
            
           <form action="/">
             

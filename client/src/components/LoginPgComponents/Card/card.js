@@ -101,11 +101,11 @@ class Card extends Component {
           )}>
         Not a member yet? SignUp
         </p>
-        <button type="button" className="btn" onClick= {()=>(
+        {/* <button type="button" className="btn" onClick= {()=>(
           this.setState({createAcct:true, login:false})
           )}>
         SignUp
-        </button>
+        </button> */}
    </div>
   </div>
 </div>
