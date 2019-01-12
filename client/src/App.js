@@ -17,10 +17,10 @@ function App() {
           <div className="mainContainer"> 
             <NavTabs />
             <Route exact path='/' component= {LoginPg} />
-            <Route exact path='/profile' component={MainPg} />
-            <Route exact path='/collectionsPg' component={CollectionsPg} />
-            <Route exact path='/aboutUs' component={AboutUs} />
-            <Route exact path='/contact' component={Contact} />
+            <Route path='/profile' component={MainPg} />
+            <Route path='/collectionsPg' component={CollectionsPg} />
+            <Route path='/aboutUs' component={AboutUs} />
+            <Route path='/contact' component={Contact} />
           </div>
         </Router>  
 
