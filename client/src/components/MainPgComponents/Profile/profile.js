@@ -13,10 +13,9 @@ import "./Card/profile.css"
 function Profile() {
   return (
     <div className="mainContainer">
-      <div className="row">
-      <ProfileOverview />
+      {/* <div className="row"> */}
       <Avatar />
-      </div>
+      <ProfileOverview />
       <UserCollections />
     </div>
   )

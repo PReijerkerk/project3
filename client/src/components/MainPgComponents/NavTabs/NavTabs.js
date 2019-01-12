@@ -48,6 +48,7 @@ class NavTabs extends Component {
       </ul>
 
       {this.loggedInRendering()}
+      <img className="userIcon" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/330px-Spongebob-squarepants.svg.png" alt="Profile Icon" />
     </div>
   </div>
   );
