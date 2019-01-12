@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
+import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
+
 
 const logout = () => {
   console.log('logout') // eslint-disable-line
@@ -20,6 +22,19 @@ const logout = () => {
 // }
 
 class Card extends Component {
+
+    state = {
+    isLoggedIn: false
+  }
+
+  // upon being called the full navBar will Render again
+  //this should be set up for the login, logout buttons
+  loggedInRendering = () =>{
+    if(this.state.isLoggedIn){
+      return <LoggedInNavTabs/>
+    }
+  }
+
   render(){
     const responseGoogle = (response) => {
       console.log(response);
@@ -40,10 +55,15 @@ class Card extends Component {
           </div>
             <div className="card-footer bg-dark">
         
+        {/* added onClick rendering that worked on the NavTabs.js 
+        to the loggedInRendering.js file */}
         <GoogleLogin
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
+                onClick= {()=>(
+                  this.setState({isLoggedIn:true})
+                )}
                 />
             <GoogleLogout
                 buttonText="Logout"
@@ -52,6 +72,8 @@ class Card extends Component {
             </GoogleLogout>
    </div>
   </div>
+  {this.loggedInRendering()}
+
 </div>
   );
 }
