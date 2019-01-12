@@ -36,7 +36,7 @@ class radarChart extends Component {
   render() { 
     return (
       <div>
-        <h2>Your Collectoins Data:</h2>
+        <h2>Your Collections Data:</h2>
         <Radar data={data} />
       </div>
     );

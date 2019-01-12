@@ -53,11 +53,13 @@ class Card extends Component {
                 in all their glory!
               </p>
           </div>
-            <div className="card-footer bg-dark">
+            <div className="card-footer">
         
         {/* added onClick rendering that worked on the NavTabs.js 
         to the loggedInRendering.js file */}
         <GoogleLogin
+
+                className="btn"    
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
@@ -66,6 +68,7 @@ class Card extends Component {
                 )}
                 />
             <GoogleLogout
+                className="btn"
                 buttonText="Logout"
                 onLogoutSuccess={logout}
             >

@@ -1,7 +1,7 @@
 .avatarCard {
     width: 18rem;
     float: right;
-    margin-top: -250px;
+    margin-top: 50px;
     margin-right: 250px;
     color: black;
     border: solid 2px black;
@@ -11,13 +11,15 @@
 }
 
 .imgWrapper {
-    padding: 10px;
+    padding: 30px;
     text-align: center;
+    border: solid 2px black;
 }
 
 .card-img-top {
     height: 8%;
     width: 80%;
+    border-radius: 50%;
 }
 
 .collection-btn {

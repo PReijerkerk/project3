@@ -3,6 +3,20 @@
     color: white;
 }
 
+.navContainerBar {
+    border-bottom: solid 4px white;
+}
+
+.navContainerBar {
+    color: white;
+}
+
 #logo {
     color: beige;
+    margin: 0px 15px 15px 15px;
+}
+
+.nav-link {
+    color: lightblue;
+    font-weight: bold;
 }

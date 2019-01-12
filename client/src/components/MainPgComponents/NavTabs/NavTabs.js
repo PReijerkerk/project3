@@ -20,6 +20,7 @@ class NavTabs extends Component {
 
   render(){
   return (
+  <div className='navContainerBar'>
     <div className='nav nav-tabs navContainer'>
       <ul className='nav nav-tabs'>
         <li className='nav-item'>
@@ -38,7 +39,6 @@ class NavTabs extends Component {
         </li> */}
       </ul>
     </div>
-    
   );
 }
 }
