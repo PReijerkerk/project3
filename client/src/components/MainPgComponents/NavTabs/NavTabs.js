@@ -39,6 +39,7 @@ class NavTabs extends Component {
         </li> */}
       </ul>
     </div>
+   </div>
   );
 }
 }
