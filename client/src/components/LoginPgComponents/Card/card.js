@@ -88,12 +88,22 @@ class Card extends Component {
                 buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
-                />
-            <GoogleLogout
-                buttonText="Logout"
-                onLogoutSuccess={logout}
-            >
-            </GoogleLogout>
+        />
+        <GoogleLogout
+            buttonText="Logout"
+            onLogoutSuccess={logout}
+        >
+        </GoogleLogout>
+        <a type="button" onClick= {()=>(
+          this.setState({createAcct:true, login:false})
+          )}>
+        SignUp
+        </a>
+        {/* <button type="button" className="btn" onClick= {()=>(
+          this.setState({createAcct:true, login:false})
+          )}>
+        SignUp
+        </button> */}
    </div>
   </div>
 </div>

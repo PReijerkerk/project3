@@ -6,3 +6,8 @@
 #logo {
     color: beige;
 }
+
+.nav-link {
+    color: lightblue;
+    font-weight: bold;
+}
