@@ -96,16 +96,6 @@ class Card extends Component {
             onLogoutSuccess={logout}
         >
         </GoogleLogout>
-        <p className="signUp" onClick= {()=>(
-          this.setState({createAcct:true, login:false})
-          )}>
-        Not a member yet? SignUp
-        </p>
-        <button type="button" className="btn" onClick= {()=>(
-          this.setState({createAcct:true, login:false})
-          )}>
-        SignUp
-        </button>
    </div>
   </div>
 </div>
