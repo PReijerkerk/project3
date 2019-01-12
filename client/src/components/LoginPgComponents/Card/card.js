@@ -1,51 +1,28 @@
 import React, { Component } from 'react';
-//import LoginForm from '../LoginForm/loginForm'
-//import CreateAcctForm from '../CreateAcctForm/createAcctForm'
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
-import TCAPI from '../../../utils/TCAPI';
 
 const logout = () => {
   console.log('logout') // eslint-disable-line
   sessionStorage.clear();
 }
-
-let isUserInDB = (response) => {
-  if (TCAPI.getUserRecord(response.profileObj.googleId)) {
-      sessionStorage.setItem("username", response.profileObj.name);
-      sessionStorage.setItem("email", response.profileObj.email);
-      TCAPI.getUserCollection(response.profileObj.googleId);
-  }  
-  else {
-      TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
-      sessionStorage.setItem("username", response.profileObj.name);
-      sessionStorage.setItem("email", response.profileObj.email);
-  }
-}
-
-
-
+// let isUserInDB = (response) => {
+//   if (TCAPI.getUserRecord(response.profileObj.googleId)) {
+//       sessionStorage.setItem("username", response.profileObj.name);
+//       sessionStorage.setItem("email", response.profileObj.email);
+//       TCAPI.getUserCollection(response.profileObj.googleId);
+//   }  
+//   else {
+//       TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
+//       sessionStorage.setItem("username", response.profileObj.name);
+//       sessionStorage.setItem("email", response.profileObj.email);
+//   }
+// }
 
 class Card extends Component {
-  
-  // state ={
-  //   login : false,
-  //   createAcct : false
-  // }
-
-  // // not rendering any modal when page first loads 
-  // modalRendering = () => {
-  //     if (this.state.login) {
-  //       return <LoginForm />;
-  //     } else if (this.state.createAcct) {
-  //       return <CreateAcctForm/>;
-  //   }
-  // }
-
   render(){
     const responseGoogle = (response) => {
       console.log(response);
-      isUserInDB(response);
     }
 
   return (
@@ -63,24 +40,6 @@ class Card extends Component {
           </div>
             <div className="card-footer bg-dark">
         
-        {/* buttons for login or sign up 
-            Currently Not working in the onClick Function within btn element - it does work 
-            if you drag out <LoginForm/> and place it between the open/closing tags of btn - 
-            the issues then is that it is always rendered */}
-        {/* <button type="button" className="btn" onClick= {()=>(
-           this.setState({login:true, createAcct:false})
-          )}
-        >   
-         Login
-        </button>
-        
-        <button type="button" className="btn" onClick= {()=>(
-          this.setState({createAcct:true, login:false})
-          )}>
-        SignUp
-        </button> */}
-
-        {/* {this.modalRendering()} */}
         <GoogleLogin
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
