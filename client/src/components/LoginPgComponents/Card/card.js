@@ -84,7 +84,7 @@ class Card extends Component {
 
         {/* {this.modalRendering()} */}
         <GoogleLogin
-                clientId=""
+                clientId="954580373008-7i462221qm0p80l6jg200joonk1s15ce.apps.googleusercontent.com"
                 buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
