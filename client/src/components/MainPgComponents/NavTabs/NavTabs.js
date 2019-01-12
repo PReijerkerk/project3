@@ -20,10 +20,11 @@ class NavTabs extends Component {
 
   render(){
   return (
+  <div className='navContainerBar'>
     <div className='nav nav-tabs navContainer'>
       <ul className='nav nav-tabs'>
         <li className='nav-item'>
-          {/* <Link
+          {/* <Link 
             to='/'
             className={window.location.pathname === '/' ? 'nav-link active' : 'nav-link'}
           > */}
@@ -48,6 +49,7 @@ class NavTabs extends Component {
 
       {this.loggedInRendering()}
     </div>
+  </div>
   );
 }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import LoginForm from '../LoginForm/loginForm'
-//import CreateAcctForm from '../CreateAcctForm/createAcctForm'
+import CreateAcctForm from '../CreateAcctForm/createAcctForm'
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
 import TCAPI from '../../../utils/TCAPI';
@@ -63,7 +63,7 @@ class Card extends Component {
                 in all their glory!
               </p>
           </div>
-            <div className="card-footer bg-dark">
+            <div className="card-footer">
         
         {/* buttons for login or sign up 
             Currently Not working in the onClick Function within btn element - it does work 
@@ -84,26 +84,28 @@ class Card extends Component {
 
         {/* {this.modalRendering()} */}
         <GoogleLogin
+                className="btn"
                 clientId=""
                 buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
         />
         <GoogleLogout
+            className="btn"
             buttonText="Logout"
             onLogoutSuccess={logout}
         >
         </GoogleLogout>
-        <a type="button" onClick= {()=>(
+        <p className="signUp" onClick= {()=>(
+          this.setState({createAcct:true, login:false})
+          )}>
+        Not a member yet? SignUp
+        </p>
+        <button type="button" className="btn" onClick= {()=>(
           this.setState({createAcct:true, login:false})
           )}>
         SignUp
-        </a>
-        {/* <button type="button" className="btn" onClick= {()=>(
-          this.setState({createAcct:true, login:false})
-          )}>
-        SignUp
-        </button> */}
+        </button>
    </div>
   </div>
 </div>
