@@ -1,53 +1,43 @@
 import React, { Component } from 'react';
-//import LoginForm from '../LoginForm/loginForm'
-import CreateAcctForm from '../CreateAcctForm/createAcctForm'
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
-import TCAPI from '../../../utils/TCAPI';
+import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
+
 
 const logout = () => {
   console.log('logout') // eslint-disable-line
   sessionStorage.clear();
-  window.location.reload();
 }
-
-let isUserInDB = (response) => {
-  if (TCAPI.getUserRecord(response.profileObj.googleId)) {
-      sessionStorage.setItem("username", response.profileObj.name);
-      sessionStorage.setItem("email", response.profileObj.email);
-      TCAPI.getUserCollection(response.profileObj.googleId);
-  }  
-  else {
-      TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
-      sessionStorage.setItem("username", response.profileObj.name);
-      sessionStorage.setItem("email", response.profileObj.email);
-  }
-}
-
-
-
+// let isUserInDB = (response) => {
+//   if (TCAPI.getUserRecord(response.profileObj.googleId)) {
+//       sessionStorage.setItem("username", response.profileObj.name);
+//       sessionStorage.setItem("email", response.profileObj.email);
+//       TCAPI.getUserCollection(response.profileObj.googleId);
+//   }  
+//   else {
+//       TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
+//       sessionStorage.setItem("username", response.profileObj.name);
+//       sessionStorage.setItem("email", response.profileObj.email);
+//   }
+// }
 
 class Card extends Component {
-  
-  // state ={
-  //   login : false,
-  //   createAcct : false
-  // }
 
-  // // not rendering any modal when page first loads 
-  // modalRendering = () => {
-  //     if (this.state.login) {
-  //       return <LoginForm />;
-  //     } else if (this.state.createAcct) {
-  //       return <CreateAcctForm/>;
-  //   }
-  // }
+    state = {
+    isLoggedIn: false
+  }
+
+  // upon being called the full navBar will Render again
+  //this should be set up for the login, logout buttons
+  loggedInRendering = () =>{
+    if(this.state.isLoggedIn){
+      return <LoggedInNavTabs/>
+    }
+  }
 
   render(){
     const responseGoogle = (response) => {
       console.log(response);
-      isUserInDB(response);
-      window.location.reload(); // This reload is here so that once logged in, the user doesn't have to manually refresh to see their data appear in the app.
     }
 
   return (
@@ -65,39 +55,28 @@ class Card extends Component {
           </div>
             <div className="card-footer">
         
-        {/* buttons for login or sign up 
-            Currently Not working in the onClick Function within btn element - it does work 
-            if you drag out <LoginForm/> and place it between the open/closing tags of btn - 
-            the issues then is that it is always rendered */}
-        {/* <button type="button" className="btn" onClick= {()=>(
-           this.setState({login:true, createAcct:false})
-          )}
-        >   
-         Login
-        </button>
-        
-        <button type="button" className="btn" onClick= {()=>(
-          this.setState({createAcct:true, login:false})
-          )}>
-        SignUp
-        </button> */}
-
-        {/* {this.modalRendering()} */}
+        {/* added onClick rendering that worked on the NavTabs.js 
+        to the loggedInRendering.js file */}
         <GoogleLogin
-                className="btn"
-                clientId=""
-                buttonText="Login"
+
+                className="btn"    
+                clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
-        />
-        <GoogleLogout
-            className="btn"
-            buttonText="Logout"
-            onLogoutSuccess={logout}
-        >
-        </GoogleLogout>
+                onClick= {()=>(
+                  this.setState({isLoggedIn:true})
+                )}
+                />
+            <GoogleLogout
+                className="btn"
+                buttonText="Logout"
+                onLogoutSuccess={logout}
+            >
+            </GoogleLogout>
    </div>
   </div>
+  {this.loggedInRendering()}
+
 </div>
   );
 }
