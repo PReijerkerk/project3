@@ -8,7 +8,6 @@ import TCAPI from '../../../utils/TCAPI';
 const logout = () => {
   console.log('logout') // eslint-disable-line
   sessionStorage.clear();
-  window.location.reload();
 }
 
 let isUserInDB = (response) => {
@@ -47,7 +46,6 @@ class Card extends Component {
     const responseGoogle = (response) => {
       console.log(response);
       isUserInDB(response);
-      window.location.reload(); // This reload is here so that once logged in, the user doesn't have to manually refresh to see their data appear in the app.
     }
 
   return (
