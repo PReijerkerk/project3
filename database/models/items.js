@@ -16,15 +16,9 @@ const itemSchema = new Schema({
         type: String
     },
     case: {
-        type: mongoose.Schema.ObjectId, ref: 'Case',
-        required: true
+        // type: mongoose.Schema.ObjectId, ref: 'Case',
+        // required: true
     },
-    user: {
-        type: mongoose.Schema.ObjectId, ref: 'User',
-        required: true
-    }
-
-
 })
 
 const Item = mongoose.model("Item", itemSchema);

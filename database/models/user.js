@@ -1,6 +1,8 @@
 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const CaseSchema = require('./case');
+const ItemSchema = require('./items')
 
 //Create Schema
 const userSchema = new Schema({
@@ -23,12 +25,12 @@ const userSchema = new Schema({
     },
     case:  [
         {
-          // Store ObjectIds in the array
-          type: Schema.Types.ObjectId,
-          // The ObjectIds will refer to the ids in the Note model
-          ref: "Case"
-        }
-      ]
+        //   // Store ObjectIds in the array
+        //   type: Schema.Types.ObjectId,
+        //   // The ObjectIds will refer to the ids in the Note model
+        //   ref: "Case"
+        }, 
+    ]
 });
 
 //Create model from Schema
