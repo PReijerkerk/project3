@@ -5,3 +5,15 @@
     height: 100%;
 }
 
+/* for SVG background rendering the parallax behind the other components */
+.SVG {
+    z-index: 0 !important;
+    position:static;
+    opacity: .2;
+  }
+/* for SVG background rendering the parallax behind the other components */
+  
+  .profile{
+    z-index: 1 !important;
+    position: absolute;
+  }
