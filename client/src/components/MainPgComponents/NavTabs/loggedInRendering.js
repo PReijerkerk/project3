@@ -11,6 +11,18 @@ const LoggedInNavTabs = () => {
   return ( 
   <div className='nav nav-tabs navContainer'>
       <ul className='nav nav-tabs'>
+      <li className='nav-item'>
+          <Link
+            to='/'
+            className={window.location.pathname === '/' ? 'nav-link active' : 'nav-link'}
+            // onClick= {()=>(
+            //   this.setState({isLoggedIn:true})
+            // )}
+          >
+            Login
+          </Link>
+        </li>
+       
         <li className='nav-item'>
           <Link to='/profile' className={window.location.pathname === '/profile' ? 'nav-link active' : 'nav-link'}>
             Home

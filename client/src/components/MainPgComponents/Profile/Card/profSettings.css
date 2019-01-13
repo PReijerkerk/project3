@@ -35,3 +35,8 @@ body {
     background: white;
     border-radius: 10px;
   }
+
+  .chartjs-render-monitor {
+    height: 300px;
+    width: 600px;
+  }
