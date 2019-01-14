@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const userController = require("../../controllers/userController");
+const userController = require("../../controllers/userController.1");
 
 // Matches "/api/users"
 router.route("/")
@@ -10,7 +10,7 @@ router.route("/")
 router.route('/:googleId')
   .get(userController.getUser)
   .put(userController.addUserCollection);
-  
+
 // matches "/api/:googleId/collections" -- retrieves all collections matching google ID
 router.route("/:googleId/collections")
   .get(userController.userCollection);
