@@ -15,16 +15,10 @@ const itemSchema = new Schema({
     note: {
         type: String
     },
-    case: {
-        type: mongoose.Schema.ObjectId, ref: 'Case',
-        required: true
-    },
-    user: {
-        type: mongoose.Schema.ObjectId, ref: 'User',
-        required: true
-    }
-
-
+    // case: {
+    //     type: mongoose.Schema.ObjectId, ref: 'Case',
+    //     required: true
+    // },
 })
 
 const Item = mongoose.model("Item", itemSchema);
