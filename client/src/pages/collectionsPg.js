@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Collections from '../components/CollectionsPgComponents/Container/container'
-import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem'
+// import Collections from '../components/CollectionsPgComponents/Container/container'
+// import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem'
 import '../components/CollectionsPgComponents/Container/collectionsContainer.css'
 import Footer from '../components/MainPgComponents/Footer/footer'
 import API from "../utils/API";
-import { List, ListItem } from "../components/CollectionsPgComponents/List";
+// import { List, ListItem } from "../components/CollectionsPgComponents/List";
 import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/Form";
 import ImageUpload from '../components/CollectionsPgComponents/ImagePreview/ImagePreview'
 import ImageGrid from '../components/CollectionsPgComponents/ImageGrid/ImageGrid'
@@ -121,12 +121,12 @@ class CollectionPg extends Component {
                 name="name"
                 placeholder="Collection Name (required)"
               />
-              {/* <Input
+              <Input
                 value={this.state.user}
                 onChange={this.handleInputChange}
                 name="user"
                 placeholder="User (required)"
-              /> */}
+              />
               <TextArea
                 className="textarea"
                 value={this.state.story}
@@ -138,17 +138,32 @@ class CollectionPg extends Component {
                 <label htmlFor="exampleFormControlFile1">Add Image:</label>
                 <input type="file" className="form-control-file" id="file"/>
               </div> */}
+              {/* <TextArea
+                className="textarea"
+                value={this.state.items}
+                onChange={this.handleInputChange}
+                name="items"
+                placeholder="Item's image URL"
+              /> */}
               <div className="row">
                 <ImageUpload />
                 <ImageGrid />
+                {/* <TextArea
+                className="textarea"
+                value={this.state.items}
+                onChange={this.handleInputChange}
+                name="items"
+                placeholder="Item's image URL"
+              /> */}
               </div>
-              <FormBtn
-                disabled={!(this.state.user && this.state.name)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit
-              </FormBtn>
+              
             </form>
+            <FormBtn
+              // disabled={!(this.state.user && this.state.name)}
+              onClick={this.handleFormSubmit}
+            >
+              Submit
+            </FormBtn>
             <br></br>
             </div>
         <Footer />
