@@ -1,6 +1,6 @@
 // import axios from "axios";
 // todos---
-// CRUD for USERS COLLECTIONS ITEMS []
+// CRUD for USERS COLLECTIONS ITEMS [x]
 import axios from "axios";
 
 export default {
@@ -52,17 +52,23 @@ export default {
 /////////////////////////////////
 ///////// USER API CRUD /////////
     // Create User
-    createUser
-
-
-
-    
-
-  
-   
-    
-  
-
-   
-   
+    createUser: function(userData) {
+        return axios.post('/api/users', userData)
+    },
+    // Get all Users
+    getAllUsers: function() {
+        return axios.get('/api/users')
+    },
+    // Get User by Id
+    getUserById: function(id) {
+        return axios.get('/api/users/' + id)
+    },
+    // Update User Data
+    updateUser: function(id, userData) {
+        return axios.put('/api/users/' + id, userData)
+    },
+    // Deletes User by ID
+    deleteUser: function(id) {
+        return axios.delete('/api/users/' + id)
+    },   
 };
