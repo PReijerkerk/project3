@@ -61,13 +61,13 @@ class Card extends Component {
 
                 className="btn"    
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
-                uxMode="redirect"
-                redirectUri="https://tc-trophy-case.herokuapp.com/profile"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
                 onClick= {()=>(
                   this.setState({isLoggedIn:true})
                 )}
+                uxMode="redirect"
+                redirectUri="https://tc-trophy-case.herokuapp.com/profile"
                 />
             <GoogleLogout
                 className="btn"
