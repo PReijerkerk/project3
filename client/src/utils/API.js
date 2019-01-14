@@ -1,32 +1,68 @@
 // import axios from "axios";
+// todos---
+// CRUD for USERS COLLECTIONS ITEMS []
 import axios from "axios";
 
 export default {
-
+    /////////////////////////////////
+    ///////// ITEM API CRUD /////////
+    // Create Item 
+    createItem: function(itemData) {
+        axios.post("/api/item", itemData)
+    },
     // Get all items from database 
     getAllItems: function() {
         return axios.get("/api/items")
     },
-    // Get All collections -- not user specific
+    // Get Item By ID
+    getItemById: function(id) {
+        return axios.get("/api/items/" + id)
+    },
+    // Update Item Info
+    updateItem: function(id, itemData) {
+        return axios.put("/api/item/" + id, itemData)
+    },
+    // Delete Item by ID
+    deleteItem: function(id) {
+        return axios.delete("/api/item" + id)
+    },
+
+    /////////////////////////////////
+    ///////// CASE API CRUD /////////
+    //Creates a collection to the DB uder the user ID
+    createCollection: function(collectionData) {
+        return axios.post("/api/collections", collectionData);
+    },
+    //Get All collections -- not user specific
     getAllCollections: function() {
-        console.log("call recieved");
         return axios.get("/api/collections")
     },
     //Get collection by ID
     getCollectionById: function(id) {
         return axios.get("/api/collections/" + id)
     },
-    // update Collection by collection id
+    //Update Collection by collection id
     updateCollection: function(id, collectionData) {
         return axios.put('/api/collections/'+ id, collectionData)
     },
-
+    //Delete Collection with matching ID
     deleteCollection: function(id) {
         return axios.delete("/api/collections/" + id);
-      },
-    // Posts a collection to the DB uder the user ID
-    createCollection: function(collectionData) {
-        console.log("post call recieved")
-        return axios.post("/api/collections", collectionData);
     },
+/////////////////////////////////
+///////// USER API CRUD /////////
+    // Create User
+    createUser
+
+
+
+    
+
+  
+   
+    
+  
+
+   
+   
 };

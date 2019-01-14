@@ -1,6 +1,16 @@
 const router = require("express").Router();
 const userController = require("../../controllers/userController");
 
+// Matches "/api/users"
+router.route("/")
+  .get(userController.getUsers)
+  .post(userController.createUser);
+
+// Matches '/api/users/:googleId
+router.route('/:googleId')
+  .get(userController.getUser)
+  .put(userController.addUserCollection);
+  
 // matches "/api/:googleId/collections" -- retrieves all collections matching google ID
 router.route("/:googleId/collections")
   .get(userController.userCollection);

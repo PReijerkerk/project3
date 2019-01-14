@@ -32,9 +32,17 @@ let getUser = (req, res) => {
     .catch(err => console.log(err));
 }
 
+// adds collection id to user
+let addUserCollection = (req, res) => {
+    db.Users.findOne({"gogleId": req.params.googleId})
+    .then(collectionInfo => res.json(collectionInfo))
+    .catch(err => console.log(err));
+}
+
 // Defining methods for the usersController
 module.exports = {
     userCollection: userCollection,
+    addUserCollection: addUserCollection,
     createUser: createUser,
     getUsers: getUsers, 
     getUser: getUser
