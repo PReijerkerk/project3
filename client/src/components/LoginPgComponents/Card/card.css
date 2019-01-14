@@ -11,5 +11,19 @@ p, button, .card-title{
 
 .btn {
   color: #011A42;
-  margin: 2px;
+  margin: 5px;
+}
+
+a.signUp {
+  font-weight: bold;
+  background-color: #343a40;
+  color: beige;
+}
+
+.card-footer {
+  background-color: #343a40;
+  color: beige;
+}
+a:hover {
+  color: #011A42
 }

@@ -11,6 +11,7 @@ import './App.css';
 // import Portfolio from './components/PortfolioContainer';
 
 function App() {
+  console.log("Anything it doesn't matter");
     return (
 
         <Router>

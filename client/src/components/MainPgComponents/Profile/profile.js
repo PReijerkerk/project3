@@ -13,8 +13,10 @@ import "./Card/profile.css"
 function Profile() {
   return (
     <div className="mainContainer">
+      <div className="row">
       <ProfileOverview />
       <Avatar />
+      </div>
       <UserCollections />
     </div>
   )

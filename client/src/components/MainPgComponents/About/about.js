@@ -77,7 +77,7 @@ function About() {
                     </ul>
                   </div>
                   <h2 className="name">Peter Reijerkerk</h2>
-                  <p>Isn't he cute?!</p>
+                  <p>World's Okayest Dad</p>
                 </div>
               </div>
             </div>
