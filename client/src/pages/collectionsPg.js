@@ -90,18 +90,10 @@ class CollectionPg extends Component {
 
                     {/* not sure how to render this from the DB */}
                           <td>
-                              added item will go here
+                            <strong>
+                              {collection.item} ITEM
+                            </strong>
                           </td>
-                          <td>
-                              added item will go here
-                          </td>
-                          <td>
-                              added item will go here
-                          </td>
-                          <td>
-                              added item will go here
-                          </td>
-                  
                         
                         </tr>
                       );
