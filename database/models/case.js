@@ -7,7 +7,7 @@ const caseSchema = new Schema({
     name: {
         type: String,
         required: true
-        },
+    },
     story: {
         type: String,
 

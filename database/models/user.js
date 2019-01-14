@@ -6,23 +6,23 @@ const ItemSchema = require('./items')
 
 //Create Schema
 const userSchema = new Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true,
-        // validate: {
-        //     isUsername: true
-        // }
-    },
+    // username: {
+    //     type: String,
+    //     required: true,
+    //     unique: true,
+    //     // validate: {
+    //     //     isUsername: true
+    //     // }
+    // },
     googleId: {
         type: String,
         required: true,
     },
-    password: {
-        type: String,
-        required: true,
-        allowNull: false
-    },
+    // password: {
+    //     type: String,
+    //     required: true,
+    //     allowNull: false
+    // },
     timestamp: {
         type: Date,
         default: Date.now
