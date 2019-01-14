@@ -15,6 +15,10 @@ const itemSchema = new Schema({
     note: {
         type: String
     },
+    imageURL: {
+        type: String,
+        default: "default"
+    }
     // case: {
     //     type: mongoose.Schema.ObjectId, ref: 'Case',
     //     required: true
