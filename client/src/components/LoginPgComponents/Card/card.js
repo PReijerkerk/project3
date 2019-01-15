@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
-// import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
-// import { instanceOf } from 'prop-types';
-// import { withCookies, Cookies } from 'react-cookie';
+import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
+
 
 const logout = () => {
   console.log('logout') // eslint-disable-line
@@ -15,6 +14,14 @@ class Card extends Component {
   constructor(props){
     super(props);
   }
+
+  // upon being called the full navBar will Render again
+  //this should be set up for the login, logout buttons
+  // loggedInRendering = () =>{
+  //   if(this.state.isLoggedIn){
+  //     return <LoggedInNavTabs/>
+  //   }
+  // }
 
   render(){
     const responseGoogle = (response) => {
@@ -36,7 +43,10 @@ class Card extends Component {
           </div>
             <div className="card-footer">
         
+        {/* added onClick rendering that worked on the NavTabs.js 
+        to the loggedInRendering.js file */}
         <GoogleLogin
+
                 className="btn"    
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
@@ -44,8 +54,6 @@ class Card extends Component {
 
                 // this should be called after the login is confirmed (this might need to be passed as a prop again)
                 onClick= {this.props.toggleLoggedIn}
-                //this should be handling the Cookies in App.js
-                onChange={this.handleNameChange.bind(this)}
                 uxMode="redirect"
                 redirectUri="https://tc-trophy-case.herokuapp.com/profile"
                 />
