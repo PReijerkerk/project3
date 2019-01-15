@@ -8,25 +8,26 @@ import API from "../utils/API";
 
 class TestPg extends Component {
     state={
+        userData:{},
         googleId: "Dantesting",
-        case: [],
-        name: "",
-        description: '',
-        price: 0,
-        note: '',
-        imageURL: '',
+        tcase: '',
+        
+
+
     }
+       
 
    componentDidMount() {
-       this.loadUser(this.state.googleId)
+       this.loadUserData(this.state.googleId)
    }
 
-   loadUser(id) {
+   loadUserData(id) {
        API.getUserById(id)
-       .then(res => this.setState({case: res.data.case}))
+       .then(res => this.setState({userData: res.data}))
+       .catch(err => console.log(err));
    }
 
-   loadCase()
+   
 
 
     
@@ -38,13 +39,22 @@ class TestPg extends Component {
          <Container>
              <Row>
                  <Col size="md-6">
-                    <List>
-                    {this.state.case.map(item => (
-                    <ListItem key={item._id}>
-                        <h1>{item.name}</h1>
-                    </ListItem>
-                    ))}
-                    </List>
+                        {this.state.userData.tcase ? (
+                            <List>
+                                {this.state.userData.tcase.map(tcase => 
+                                    <ListItem key={tcase._id}>
+                                        <h1>{tcase.name}</h1>
+                                        {tcase.items ? (
+                                            <div>
+                                            {tcase.items.map(item => <h1>{item.name}</h1>)}
+                                            </div>
+                                        ) : (<p>noting here, add items</p>)}
+                                    </ListItem>
+                                )}
+                            </List>
+                        ) : (
+                            <h1>there aint shit </h1>
+                        )}
                  </Col>
              </Row>
          </Container>

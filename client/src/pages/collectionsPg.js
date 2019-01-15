@@ -12,7 +12,8 @@ import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/
 class CollectionPg extends Component {
   state = { 
     googleId: 'Dantesting',
-    userData: {}
+    userData: {},
+    
 
   }
 
