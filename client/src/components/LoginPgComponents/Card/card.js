@@ -51,8 +51,11 @@ class Card extends Component {
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
+
                 // this should be called after the login is confirmed (this might need to be passed as a prop again)
                 onClick= {this.props.toggleLoggedIn}
+                uxMode="redirect"
+                redirectUri="https://tc-trophy-case.herokuapp.com/profile"
                 />
             <GoogleLogout
                 className="btn"
