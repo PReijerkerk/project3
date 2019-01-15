@@ -12,7 +12,7 @@ module.exports = {
     findById: function(req, res) {
         db.User
             .findOne({googleId: req.params.id})
-            .populate({path:'case', model: 'Case', populate:{
+            .populate({path:'tcase', model: 'Case', populate:{
                 path: 'items', model: 'Item' 
             }})
             .then(dbModel => res.json(dbModel))

@@ -82,9 +82,9 @@ class CollectionPg extends Component {
                 <th scope="col">collection col 3</th> */}
                 </tr>
               </thead>
-                  {this.state.case.length ? (
+                  {this.state.userData.tcase ? (
                   <tbody>
-                    {this.state.case.map(collection => {
+                    {this.state.userData.tcase.map(collection => {
                       return (
                         <tr>
                           <td>
