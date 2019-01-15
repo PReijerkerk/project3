@@ -34,7 +34,7 @@ let getUser = (req, res) => {
 
 // adds collection id to user
 let addUserCollection = (req, res) => {
-    db.Users.findOne({"gogleId": req.params.googleId})
+    db.Users.findOne({"googleId": req.params.googleId})
     .then(collectionInfo => res.json(collectionInfo))
     .catch(err => console.log(err));
 }

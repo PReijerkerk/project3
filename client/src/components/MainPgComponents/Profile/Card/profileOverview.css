@@ -4,6 +4,7 @@
     border: 2px solid black;
     background-color: beige;
     color: #033469;
+    z-index: 1;
 }
 
 .card-title {

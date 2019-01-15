@@ -2,10 +2,13 @@
     background-color: #025E73;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    
 }
 
 .profileCard {
     margin: 50px;
+    z-index:1;
     
 }
 

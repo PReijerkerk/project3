@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 // import Collections from '../components/CollectionsPgComponents/Container/container'
-import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem'
-import '../components/CollectionsPgComponents/Container/collectionsContainer.css'
-import Footer from '../components/MainPgComponents/Footer/footer'
+import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem';
+import '../components/CollectionsPgComponents/Container/collectionsContainer.css';
+import Footer from '../components/MainPgComponents/Footer/footer';
+// import Parallax from '../svg _background_files/rellax';
 import API from "../utils/API";
 // import { List, ListItem } from "../components/CollectionsPgComponents/List";
 import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/Form";
-
+// import '../components/CollectionsPgComponents/Container/container.css'
 
 
 class CollectionPg extends Component {
@@ -56,6 +57,9 @@ class CollectionPg extends Component {
     return ( 
       <div>
         <div className = 'container'>
+        {/* removed relax js just for now as 
+        the zIndex on this pg is harder to pin down */}
+        {/* <Parallax/> */}
          <form>
               <Input
                 value={this.state.name}

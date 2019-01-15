@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-// import LoggedInNavTabs from '../NavTabs/loggedInRendering'
+import { Link } from 'react-router-dom';
+import LoggedInNavTabs from '../NavTabs/loggedInRendering'
 import "./navtabs.css";
 
 class NavTabs extends Component {
  
   // created state to check to see if user has logged in
-  // state = {
-  //   isLoggedIn: false
-  // }
+  state = {
+    isLoggedIn: false
+  }
 
   // upon being called the full navBar will Render again
-  //this should be set up for the login, logout buttons
-  // loggedInRendering = () =>{
-  //   if(this.state.isLoggedIn){
-  //     return <LoggedInNavTabs/>
-  //   }
-  // }
+  // this should be set up for the login, logout buttons
+  loggedInRendering = () =>{
+    if(this.state.isLoggedIn){
+      return <LoggedInNavTabs/>
+    }
+  }
 
   render(){
   return (
@@ -26,7 +26,7 @@ class NavTabs extends Component {
         <li className='nav-item'>
             <h1 id="logo">TrophyCase</h1>
         </li>
-        {/* <li className='nav-item'>
+        <li className='nav-item'>
           <Link
             to='/'
             className={window.location.pathname === '/' ? 'nav-link active' : 'nav-link'}
@@ -36,9 +36,10 @@ class NavTabs extends Component {
           >
             Login
           </Link>
-        </li> */}
+        </li>
       </ul>
     </div>
+    {this.loggedInRendering()}
    </div>
   );
 }
