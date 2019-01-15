@@ -11,7 +11,10 @@ module.exports = {
     },
     findById: function(req, res) {
         db.User
-            .find({googleId: req.params.id})
+            .findOne({googleId: req.params.id})
+            .populate({path:'case', model: 'Case', populate:{
+                path: 'items', model: 'Item' 
+            }})
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },

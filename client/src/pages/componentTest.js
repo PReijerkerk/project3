@@ -23,8 +23,10 @@ class TestPg extends Component {
 
    loadUser(id) {
        API.getUserById(id)
-       .then()
+       .then(res => this.setState({case: res.data.case}))
    }
+
+   loadCase()
 
 
     
