@@ -5,6 +5,7 @@ import NavTabs from './components/MainPgComponents/NavTabs/NavTabs';
 import LoginPg from './pages/loginPg';
 import CollectionsPg from './pages/collectionsPg';
 import MainPg from './pages/mainPg';
+import TestPg from './pages/componentTest';
 import AboutUs from './pages/aboutUs';
 import Contact from './pages/contact';
 import './App.css';
@@ -17,6 +18,7 @@ function App() {
         <Router>
           <div className="mainContainer"> 
             <NavTabs />
+            <Route exact path='/test' component= {TestPg} />
             <Route exact path='/' component= {LoginPg} />
             <Route exact path='/profile' component={MainPg} />
             <Route exact path='/collectionsPg' component={CollectionsPg} />
