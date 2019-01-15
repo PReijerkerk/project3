@@ -5,6 +5,7 @@
     height: 300px;
     background-color: beige;
     color: #033469;
+    z-index: 1;
 }
 
 .collection-btn {
