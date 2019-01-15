@@ -12,11 +12,8 @@ import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/
 
 class CollectionPg extends Component {
   state = { 
-    case: [],
-    name: "",
-    story: "",
-    user: "",
-    items: []
+    googleId: 'Dantesting',
+    userData: {}
 
   }
 
@@ -25,9 +22,11 @@ class CollectionPg extends Component {
   }
 
   loadTrophyCase = () => {
-    API.getAllCollections()
+    API.getUserById(this.state.googleId)
     .then(res =>
-        this.setState({case: res.data})
+        this.setState({
+          userData: res.data
+        })
     )
     .catch(err => console.log(err));
   }

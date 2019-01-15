@@ -3,7 +3,6 @@ const db = require("../database/models");
 //defining methods for the Collections collection
 module.exports = {
     findAll: function(req, res) {
-        console.log(res)
         db.Case
             .find(req.query)
             .sort({date: -1})
@@ -23,8 +22,6 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
-        console.log(req.params)
-        console.log(req.body)
         db.Case
           .findByIdAndUpdate(req.params.id , req.body, {new: true} )
           .then(dbModel => res.json(dbModel))

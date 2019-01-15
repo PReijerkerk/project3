@@ -10,11 +10,16 @@ const itemSchema = new Schema({
         type: String
     },
     price: {
-        type: Number
+        type: Number,
+        default: 0
     },
     note: {
         type: String
     },
+    imageURL: {
+        type: String,
+        default: "default"
+    }
     // case: {
     //     type: mongoose.Schema.ObjectId, ref: 'Case',
     //     required: true

@@ -6,6 +6,7 @@ import LoggedInNavTabs from './components/MainPgComponents/NavTabs/loggedInRende
 import LoginPg from './pages/loginPg';
 import CollectionsPg from './pages/collectionsPg';
 import MainPg from './pages/mainPg';
+import TestPg from './pages/componentTest';
 import AboutUs from './pages/aboutUs';
 import Contact from './pages/contact';
 import './App.css';
@@ -37,7 +38,7 @@ class App extends Component {
           <div className="mainContainer">
              {/*passing up state from card.js   */}
              {this.loggedInRendering()}
-
+            <Route exact path='/test' component= {TestPg} />
             <Route exact path='/' render={(props) => <LoginPg {...props} toggleLoggedIn={this.toggleLoggedIn}/>} />
             <Route exact path='/profile' component={MainPg} />
             <Route exact path='/collectionsPg' component={CollectionsPg} />
