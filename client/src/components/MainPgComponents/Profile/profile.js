@@ -17,7 +17,7 @@ function Profile() {
       <ProfileOverview />
       <Avatar />
       </div>
-      <UserCollections />
+      {/* <UserCollections /> */}
     </div>
   )
 }
