@@ -8,32 +8,20 @@ const logout = () => {
   console.log('logout') // eslint-disable-line
   sessionStorage.clear();
 }
-// let isUserInDB = (response) => {
-//   if (TCAPI.getUserRecord(response.profileObj.googleId)) {
-//       sessionStorage.setItem("username", response.profileObj.name);
-//       sessionStorage.setItem("email", response.profileObj.email);
-//       TCAPI.getUserCollection(response.profileObj.googleId);
-//   }  
-//   else {
-//       TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
-//       sessionStorage.setItem("username", response.profileObj.name);
-//       sessionStorage.setItem("email", response.profileObj.email);
-//   }
-// }
 
 class Card extends Component {
 
-    state = {
-    isLoggedIn: false
+  constructor(props){
+    super(props);
   }
 
   // upon being called the full navBar will Render again
   //this should be set up for the login, logout buttons
-  loggedInRendering = () =>{
-    if(this.state.isLoggedIn){
-      return <LoggedInNavTabs/>
-    }
-  }
+  // loggedInRendering = () =>{
+  //   if(this.state.isLoggedIn){
+  //     return <LoggedInNavTabs/>
+  //   }
+  // }
 
   render(){
     const responseGoogle = (response) => {
@@ -63,9 +51,9 @@ class Card extends Component {
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
-                onClick= {()=>(
-                  this.setState({isLoggedIn:true})
-                )}
+
+                // this should be called after the login is confirmed (this might need to be passed as a prop again)
+                onClick= {this.props.toggleLoggedIn}
                 uxMode="redirect"
                 redirectUri="https://tc-trophy-case.herokuapp.com/profile"
                 />
@@ -75,9 +63,10 @@ class Card extends Component {
                 onLogoutSuccess={logout}
             >
             </GoogleLogout>
+  
    </div>
   </div>
-  {this.loggedInRendering()}
+  {/* {this.loggedInRendering()} */}
 
 </div>
   );
