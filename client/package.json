@@ -12,6 +12,7 @@
     "mongoose": "^5.4.1",
     "react": "^16.7.0",
     "react-chartjs-2": "^2.7.4",
+    "react-cookie": "^3.0.8",
     "react-dom": "^16.7.0",
     "react-google-login": "^4.0.1",
     "react-pose": "^4.0.4",
