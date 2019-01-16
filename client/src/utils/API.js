@@ -53,7 +53,7 @@ export default {
 ///////// USER API CRUD /////////
     // Create User
     createUser: function(userData) {
-        return axios.post('/api/signup', userData)
+        return axios.post('/api/users', userData)
     },
     // Get all Users
     getAllUsers: function() {
