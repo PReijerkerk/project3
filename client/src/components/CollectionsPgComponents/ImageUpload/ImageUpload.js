@@ -30,13 +30,13 @@ class ImageUpload extends React.Component {
     }
   
     render() {
-      let {imagePreviewUrl} = this.state;
-      let $imagePreview = null;
-      if (imagePreviewUrl) {
-        $imagePreview = (<img src={imagePreviewUrl} />);
-      } else {
-        $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
-      }
+      // let {imagePreviewUrl} = this.state;
+      // let $imagePreview = null;
+      // if (imagePreviewUrl) {
+      //   $imagePreview = ();
+      // } else {
+      //   $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+      // }
   
       return (
         <div className="previewComponent">
@@ -53,7 +53,7 @@ class ImageUpload extends React.Component {
               onClick={(e)=>this._handleSubmit(e)}>Upload Image</button>
           </form>
           <div className="imgPreview">
-            {$imagePreview}
+            {/* {$imagePreview} */}
           </div>
         </div>
       )
