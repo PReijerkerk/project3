@@ -7,15 +7,17 @@ import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/
 import ImageUpload from '../components/CollectionsPgComponents/ImageUpload/ImageUpload'
 import ImageGrid from '../components/CollectionsPgComponents/ImageGrid/ImageGrid'
 import './collectionsPg.css'
+import LoggedInRendering from '../components/MainPgComponents/NavTabs/loggedInRendering'
+
 
 class CollectionPg extends Component {
   state = { 
-    googleId: 'Dantesting',
+    username: 'Tommy',
     userData: {},
-    tcase: [],
+    tcase: ['Tommy'],
     name: "",
     story: "",
-    user: "",
+    user: "Tommy",
     items: []
   
   }
@@ -25,7 +27,7 @@ class CollectionPg extends Component {
   }
 
   loadTrophyCase = () => {
-    API.getUserById(this.state.googleId)
+    API.getUserById(this.state.username)
     .then(res =>
         this.setState({
           userData: res.data
@@ -59,6 +61,8 @@ class CollectionPg extends Component {
   render() { 
     return ( 
       <div className="container-margin">
+      
+      <LoggedInRendering/>
           {/* <Collections/> */}
         <div className = 'container'>
           <div className="collectionContainer">
