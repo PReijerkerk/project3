@@ -20,32 +20,32 @@ componentDidMount = () => {
       <div>
         <div className = 'row'>
 
-          <div className = 'col'>
+          <div className = 'col-lg-2'>
             <div className='rellax SVG' data-rellax-speed='-2' data-rellax-percentage=".1">
               <img src={Trophy1} alt = "trophy1"/>
             </div>
           </div>
 
-          <div className = 'col'>
+          <div className = 'col-lg-2'>
             <div className='rellax SVG'>
             <img src={Trophy3} alt = "trophy3"/>
             </div>
           </div>
         
-          <div className = 'col'>
+          <div className = 'col-lg-2'>
             <div className='rellax SVG' data-rellax-speed='-5' data-rellax-percentage=".21">
             <img src={Trophy2}  alt = "trophy2"/>
             </div>
           </div>
         
-          <div className = 'col'>
+          <div className = 'col-lg-2'>
             <div className='rellax SVG' data-rellax-speed='-9' data-rellax-percentage=".5">
             <img src={Trophy1} alt = "trophy1"/>            
             </div>
           </div>
 
 
-          <div className = 'col'>
+          <div className = 'col-lg-2'>
             <div className='rellax SVG' data-rellax-speed='-4'data-rellax-percentage="0.2">
             <img src={Trophy3} alt = "trophy1"/>
               
@@ -53,7 +53,7 @@ componentDidMount = () => {
           </div>
 
           
-          <div className = 'col'>
+          <div className = 'col-lg-2'>
             <div className='rellax SVG' data-rellax-speed='-10' data-rellax-percentage=".5">
             <img src={Trophy2} alt = "trophy2"/>           
             </div>

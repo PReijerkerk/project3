@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
-import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
+// import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
 
 
 const logout = () => {
