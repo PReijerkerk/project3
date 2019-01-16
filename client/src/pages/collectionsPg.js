@@ -12,7 +12,7 @@ import LoggedInRendering from '../components/MainPgComponents/NavTabs/loggedInRe
 
 class CollectionPg extends Component {
   state = { 
-    username: '',
+    username: '' ,
     userData: {},
     collectionName: "",
     itemName: "",
@@ -24,6 +24,14 @@ class CollectionPg extends Component {
 
   componentDidMount() {
     this.loadTrophyCase()
+  }
+  componentWillMount(){
+    let username = '';
+    if (localStorage && localStorage.getItem('username')) {
+       username = JSON.parse(localStorage.getItem('username'));
+      }
+     this.setState({username: username})
+     console.log(this.state.username);
   }
 
   loadTrophyCase = () => {

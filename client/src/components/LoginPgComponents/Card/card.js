@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Redirect } from 'react';
+// import Redirect from 'react-router-dom';
 import './card.css';
 // import { GoogleLogout, GoogleLogin } from 'react-google-login';
+
 import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
 import { FormBtn } from '../../CollectionsPgComponents/Form';
 import API from "../../../utils/API";
-import axios from 'axios';
+// import axios from 'axios';
 
 
 // const logout = () => {
@@ -20,7 +22,8 @@ class Card extends Component {
       email: " ",
       password: " ",
       firstName: " ",
-      lastName: " "
+      lastName: " ",
+      username: " "
     }
   }
   handleInputChange = event => {
@@ -30,6 +33,22 @@ class Card extends Component {
     });
   };
 
+  handleLogin = event => {
+    event.preventDefault();
+
+    API.userLogin({
+      username: this.state.username,
+      password: this.state.password
+    })
+    .then(response => {
+      this.setState({
+        redirectTo: '/profile' + response.data._id
+      })
+    }).catch(error => {
+      console.log('Sign up server error: ');
+      console.log(error); 
+    })
+  }
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("Clicked!! Email: " + this.state.email + " Password: " + this.state.password);
@@ -37,16 +56,23 @@ class Card extends Component {
       email: this.state.email,
       password: this.state.password,
       firstName: this.state.firstName,
-      lastName: this.state.lastName
+      lastName: this.state.lastName,
+      username: this.state.username
     })
     .then(response => {
       if(response.data) {
         console.log('successful signup')
-        // this.setState({
-          // redirectTo: '/profile'
-        // })
-      }
-       else {
+        console.log(response.data);
+        console.log(this.props);
+        localStorage.setItem('username',
+       JSON.stringify(this.state.username));
+
+        document.location.href = '/collectionsPg/';
+
+       
+        
+        
+      } else {
         console.log('Sign-up error');
       }
     }).catch(error => {
@@ -106,6 +132,16 @@ class Card extends Component {
               <br/>
               <br/>
 
+            <label htmlFor="username">User Name: </label>
+            <input
+              type="text"
+              name="username"
+              value={this.state.username}
+              onChange={this.handleInputChange}
+              />
+              <br/>
+              <br/>
+
             <label htmlFor="email">Email: </label>
             <input
               type="text"
@@ -126,9 +162,10 @@ class Card extends Component {
 
               <br/>
               <FormBtn
-              disabled={!(this.state.email && this.state.password && this.state.firstName && this.state.lastName)}
+              disabled={!(this.state.email && this.state.password && this.state.firstName && this.state.lastName && this.state.username)}
               onClick={this.handleFormSubmit}
               >
+               
               Sign UP
               </FormBtn>
              

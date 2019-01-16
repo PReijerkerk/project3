@@ -70,5 +70,8 @@ export default {
     // Deletes User by ID
     deleteUser: function(id) {
         return axios.delete('/api/users/' + id)
-    },   
+    },
+    userLogin: function(userData) {
+        return axios.post('/api/login', userData)
+    }   
 };
