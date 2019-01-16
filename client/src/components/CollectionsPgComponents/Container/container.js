@@ -19,7 +19,7 @@ class Container extends Component {
   loadTrophyCase = () => {
     API.getAllCollections()
     .then(res =>
-        this.setState({case: res.data})
+        this.setState({tcase: res.data})
     )
     .catch(err => console.log(err));
   }
