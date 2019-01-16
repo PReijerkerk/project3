@@ -10,9 +10,9 @@ let userCollection = (req, res) => {
 // create a new user in the db.
 let createUser = (req, res) => {
     db.Users.create({
-        "name": req.body.name,
-        "googleId": req.body.googleId,
-        "imageUrl": req.body.imageUrl,
+        "firstName": req.body.firstName,
+        "lastName": req.body.lastName,
+        "password": req.body.password,
         "email": req.body.email
     })
     .then(data => res.json(data))

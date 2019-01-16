@@ -24,7 +24,7 @@ router.route("/:googleId")
   .get(userController.getUser);
 
   //Matches "/api/create-user" -- create a new user in the db.Users
-router.route("/create-user")
+router.route("/api/signup")
   .post(userController.createUser);
 
   module.exports = router;
