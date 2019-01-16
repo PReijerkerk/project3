@@ -24,11 +24,12 @@ class CollectionPg extends Component {
   state = { 
     googleId: 'Dantesting',
     userData: {},
-    case: [],
-    name: "",
+    tcase: [],
+    name: "Tommy",
     story: "",
     user: "",
     items: []
+  
   }
 
   componentDidMount() {
@@ -98,15 +99,11 @@ class CollectionPg extends Component {
                             </a>
                           </div>
                           </td>
-
-
-                    {/* not sure how to render this from the DB */}
                           <td>
-                            <strong>
-                              {collection.item} ITEM
-                            </strong>
+                            {this.state.userData.tcase[0].items?(
+                              <div>{this.state.userData.tcase[0].items[0].name}</div>
+                            ):(<div>no items to display</div>)}
                           </td>
-                        
                         </tr>
                       );
                     })}

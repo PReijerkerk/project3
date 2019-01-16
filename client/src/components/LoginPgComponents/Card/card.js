@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
-// import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
+import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
 
 
 const logout = () => {
@@ -11,9 +11,9 @@ const logout = () => {
 
 class Card extends Component {
 
-  // constructor(props){
-  //   super(props);
-  // }
+  constructor(props){
+    super(props);
+  }
 
   // upon being called the full navBar will Render again
   //this should be set up for the login, logout buttons
@@ -63,7 +63,10 @@ class Card extends Component {
                 onLogoutSuccess={logout}
             >
             </GoogleLogout>
-  
+        <button
+          onClick= {this.props.toggleLoggedIn}>
+            Pretend Im the login button "oooh cool"
+        </button>
    </div>
   </div>
   {/* {this.loggedInRendering()} */}

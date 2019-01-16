@@ -7,9 +7,9 @@ class AddItem extends Component {
     add:false  
    }
   
-  modalRendering = () => {
+  modalRendering = (props) => {
     if (this.state.add) {
-      return <AddItemModal/>
+      return <AddItemModal {...props}/>
     }
   }
 
