@@ -35,9 +35,10 @@ class AddItemModal extends React.Component{
   state = { 
     isVisible: false,
     case: [],
-    itemName: "",
-    user: "", //not sure if we will need a user here
-    itemDiscription: ""
+    itemData: "",
+    user: "Tommy", //not sure if we will need a user here
+    itemDiscription: "",
+    itemName:""
   };
 
   componentDidMount() {
@@ -50,7 +51,7 @@ class AddItemModal extends React.Component{
   loadTrophyCase = () => {
     API.getAllCollections()
     .then(res =>
-        this.setState({case: res.data})
+        this.setState({tcase: res.data})
     )
     .catch(err => console.log(err));
   }
@@ -127,7 +128,7 @@ class AddItemModal extends React.Component{
               <select 
                 className="form-control" 
                 id="collectionRoute">
-                  <option> {this.state.case[1]} </option>
+                  <option> {this.props.options} </option>
                   <option>collection B </option>
                   <option>collection C </option>
               </select>

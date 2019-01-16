@@ -8,6 +8,8 @@
     padding: 20px;
     background-color: beige;
     text-align: center;
+    z-index: 2;
+    height: 500px;
 }
 
 .imgWrapper {
@@ -17,9 +19,8 @@
 }
 
 .card-img-top {
-    height: 8%;
+    height: 5%;
     width: 80%;
-    border-radius: 50%;
 }
 
 .collection-btn {

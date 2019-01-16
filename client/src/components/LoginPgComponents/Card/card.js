@@ -2,43 +2,72 @@ import React, { Component } from 'react';
 import './card.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
 import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
+import { FormBtn } from '../../CollectionsPgComponents/Form';
+import API from "../../../utils/API";
+import axios from 'axios';
 
 
 const logout = () => {
   console.log('logout') // eslint-disable-line
   sessionStorage.clear();
 }
-// let isUserInDB = (response) => {
-//   if (TCAPI.getUserRecord(response.profileObj.googleId)) {
-//       sessionStorage.setItem("username", response.profileObj.name);
-//       sessionStorage.setItem("email", response.profileObj.email);
-//       TCAPI.getUserCollection(response.profileObj.googleId);
-//   }  
-//   else {
-//       TCAPI.createUser(response.profileObj.name, response.profileObj.googleId, response.profileObj.imageUrl, response.profileObj.email);
-//       sessionStorage.setItem("username", response.profileObj.name);
-//       sessionStorage.setItem("email", response.profileObj.email);
-//   }
-// }
 
 class Card extends Component {
 
-    state = {
-    isLoggedIn: false
+  constructor(props){
+    super(props);
+    this.state = {
+      email: " ",
+      password: " ",
+      firstName: " ",
+      lastName: " "
+    }
+  }
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    console.log("Clicked!! Email: " + this.state.email + " Password: " + this.state.password);
+    API.createUser({
+      email: this.state.email,
+      password: this.state.password,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName
+    })
+    .then(response => {
+      if(response.data) {
+        console.log('successful signup')
+        this.setState({
+          redirectTo: '/profile'
+        })
+      } else {
+        console.log('Sign-up error');
+      }
+    }).catch(error => {
+      console.log('Sign up server error: ')
+      console.log(error);
+    })
+
+    
   }
 
   // upon being called the full navBar will Render again
   //this should be set up for the login, logout buttons
   loggedInRendering = () =>{
     if(this.state.isLoggedIn){
-      return <LoggedInNavTabs/>
+      //return <LoggedInNavTabs/>
     }
   }
 
   render(){
-    const responseGoogle = (response) => {
-      console.log(response);
-    }
+    // const responseGoogle = (response) => {
+    //   console.log("This is the RESPONSE! " + response);
+    // }
 
   return (
     <div>
@@ -54,28 +83,78 @@ class Card extends Component {
               </p>
           </div>
             <div className="card-footer">
-        
+        <form> 
+            <label htmlFor="firstName">First Name: </label>
+            <input
+              type="text"
+              name="firstName"
+              value={this.state.firstName}
+              onChange={this.handleInputChange}
+              />
+
+              <br/>
+              <br/>
+
+            <label htmlFor="lastName">Last Name: </label>
+            <input
+              type="text"
+              name="lastName"
+              value={this.state.lastName}
+              onChange={this.handleInputChange}
+              />
+              <br/>
+              <br/>
+
+            <label htmlFor="email">Email: </label>
+            <input
+              type="text"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+              />
+              <br/>
+              <br/>
+
+            <label htmlFor="password">Password: </label>
+            <input
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleInputChange}
+              />
+
+              <br/>
+              <FormBtn
+              disabled={!(this.state.email && this.state.password && this.state.firstName && this.state.lastName)}
+              onClick={this.handleFormSubmit}
+              >
+              Sign UP
+              </FormBtn>
+        </form>
         {/* added onClick rendering that worked on the NavTabs.js 
         to the loggedInRendering.js file */}
-        <GoogleLogin
+        {/* <GoogleLogin
 
                 className="btn"    
                 clientId="954580373008-teabf1ael8s16gqpriuf257i298gr2fv.apps.googleusercontent.com"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
-                onClick= {()=>(
-                  this.setState({isLoggedIn:true})
-                )}
+
+                // this should be called after the login is confirmed (this might need to be passed as a prop again)
+                onClick= {this.props.toggleLoggedIn}
+                uxMode="redirect"
+                redirectUri="https://tc-trophy-case.herokuapp.com/profile"
                 />
             <GoogleLogout
                 className="btn"
                 buttonText="Logout"
                 onLogoutSuccess={logout}
             >
-            </GoogleLogout>
+            </GoogleLogout> */}
+  
    </div>
   </div>
-  {this.loggedInRendering()}
+  {/* {this.loggedInRendering()} */}
 
 </div>
   );

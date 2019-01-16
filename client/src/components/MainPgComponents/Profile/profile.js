@@ -6,7 +6,7 @@
 import React from 'react';
 import Avatar from './Card/avatar'
 import ProfileOverview from './Card/profileOverview'
-import UserCollections from './Card/userCollections'
+// import UserCollections from './Card/userCollections'
 import "./Card/profile.css"
 
 
@@ -17,7 +17,7 @@ function Profile() {
       <ProfileOverview />
       <Avatar />
       </div>
-      <UserCollections />
+      {/* <UserCollections /> */}
     </div>
   )
 }
