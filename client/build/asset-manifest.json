@@ -1,16 +1,16 @@
 {
-  "main.css": "/static/css/main.64921e97.chunk.css",
-  "main.js": "/static/js/main.a014a310.chunk.js",
-  "main.js.map": "/static/js/main.a014a310.chunk.js.map",
-  "static/js/1.a67442ce.chunk.js": "/static/js/1.a67442ce.chunk.js",
-  "static/js/1.a67442ce.chunk.js.map": "/static/js/1.a67442ce.chunk.js.map",
+  "main.css": "/static/css/main.9ed6cb21.chunk.css",
+  "main.js": "/static/js/main.23aae825.chunk.js",
+  "main.js.map": "/static/js/main.23aae825.chunk.js.map",
+  "static/js/1.056ba88e.chunk.js": "/static/js/1.056ba88e.chunk.js",
+  "static/js/1.056ba88e.chunk.js.map": "/static/js/1.056ba88e.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.64921e97.chunk.css.map": "/static/css/main.64921e97.chunk.css.map",
+  "static/css/main.9ed6cb21.chunk.css.map": "/static/css/main.9ed6cb21.chunk.css.map",
   "static/media/trophy1.svg": "/static/media/trophy1.54725220.svg",
   "static/media/trophy3.svg": "/static/media/trophy3.b5b5f521.svg",
   "static/media/trophy2.svg": "/static/media/trophy2.213d77df.svg",
   "index.html": "/index.html",
-  "precache-manifest.ff38920a43b62ac2b7d5d37681eda4c0.js": "/precache-manifest.ff38920a43b62ac2b7d5d37681eda4c0.js",
+  "precache-manifest.3d529695b34dddee095623c4a3e0f627.js": "/precache-manifest.3d529695b34dddee095623c4a3e0f627.js",
   "service-worker.js": "/service-worker.js"
 }
