@@ -1,0 +1,13 @@
+
+.card-body{
+    color: black;
+}
+.textarea {
+    width: 1080px;
+    height: 100px;
+}
+
+.container-margin {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}

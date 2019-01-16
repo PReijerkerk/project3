@@ -5,18 +5,19 @@ import {List, ListItem} from "../components/CollectionsPgComponents/List";
 import Card from "../components/CollectionsPgComponents/Card";
 // import Thumbnail from "../components/CollectionsPgComponents/Thumbnail"
 import API from "../utils/API";
+import './componentTest.css'
 
 
 class TestPg extends Component {
     state={
         userData:{},
-        username: "Dantesting",
+        username: "Dantheman",
         tcase: '',
     }
        
 
    componentDidMount() {
-       this.loadUserData(this.state.googleId)
+       this.loadUserData(this.state.username)
    }
 
    loadUserData(id) {
@@ -34,32 +35,31 @@ class TestPg extends Component {
         return(
         <Container>
             <Row>
-                <Col size="md-6">
-                    <Card>
+                <Col size="md-12">
                         {this.state.userData.tcase ? 
                             (
-                                <List>
-                                    
+                                <Row>
                                     {this.state.userData.tcase.map((collection, index) => {
-                                        return(
-                                            <ListItem key={index}>
-                                                <li>{collection.name}</li>
-                                                {collection.items.map((subitem, i) => {
-                                                    return(
-                                                        <ul><li>{subitem.name}</li></ul>
-                                                    )
-                                                })}
-                                            </ListItem>
+                                        // eslint-disable-next-line no-unused-expressions
+                                       return(
+                                        <Col size="md-12">
+                                            <Card key={index} heading={collection.name} >
+                                                {collection.items ? (
+                                                    <p>Items are here</p>
+                                                ) : (
+                                                    <p>No items to display</p>
+                                                )}
+                                            </Card>
+                                        </Col>
                                         )
                                     })}
-                                </List>
+                                </Row>
                             ) 
                             : 
                             (
-                                <h1>there aint shit </h1>
+                                <h1>No Collections to display</h1>
                             )
                         }
-                    </Card>
                 </Col>
             </Row>
         </Container>

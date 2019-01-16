@@ -10,7 +10,7 @@ import ImageGrid from '../components/CollectionsPgComponents/ImageGrid/ImageGrid
 
 class CollectionPg extends Component {
   state = { 
-    googleId: '',
+    username: 'Dantheman',
     userData: {},
     tcase: [],
     name: "",
@@ -25,7 +25,7 @@ class CollectionPg extends Component {
   }
 
   loadTrophyCase = () => {
-    API.getUserById(this.state.googleId)
+    API.getUserById(this.state.username)
     .then(res =>
         this.setState({
           userData: res.data
