@@ -19,7 +19,7 @@ class Card extends Component {
   //this should be set up for the login, logout buttons
   loggedInRendering = () =>{
     if(this.state.isLoggedIn){
-      return <LoggedInNavTabs/>
+      //return <LoggedInNavTabs/>
     }
   }
 
