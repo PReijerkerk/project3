@@ -39,7 +39,7 @@ class TestPg extends Component {
                         {this.state.userData.tcase ? 
                             (
                                 <List>
-                                    
+                                    {this.state.userData}
                                 </List>
                             ) 
                             : 
