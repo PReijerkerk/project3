@@ -1,6 +1,6 @@
-// import React, { Component } from 'react'
+
 // // import Collections from '../components/CollectionsPgComponents/Container/container'
-// import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem';
+import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem';
 // import '../components/CollectionsPgComponents/Container/collectionsContainer.css';
 // import Footer from '../components/MainPgComponents/Footer/footer';
 // // import Parallax from '../svg _background_files/rellax';
@@ -22,10 +22,10 @@ import './collectionsPg.css'
 
 class CollectionPg extends Component {
   state = { 
-    googleId: 'Dantesting',
+    googleId: 'Tommy',
     userData: {},
     tcase: [],
-    name: "Tommy",
+    name: "",
     story: "",
     user: "",
     items: []
@@ -167,6 +167,7 @@ class CollectionPg extends Component {
             </FormBtn>
             <br></br>
             </div>
+            <AddItem/>
         <Footer />
       </div>
       );
