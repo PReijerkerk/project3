@@ -17,7 +17,7 @@ import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/Form";
 import ImageUpload from '../components/CollectionsPgComponents/ImageUpload/ImageUpload'
 import ImageGrid from '../components/CollectionsPgComponents/ImageGrid/ImageGrid'
-import './collectionsPg.css'
+// import './collectionsPg.css'
 
 class CollectionPg extends Component {
   state = { 
