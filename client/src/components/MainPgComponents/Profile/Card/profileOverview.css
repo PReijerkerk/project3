@@ -1,6 +1,6 @@
 .profileCard {
     width: 800px;
-    height: 600px;
+    height: 500px;
     border: 2px solid black;
     background-color: beige;
     color: #033469;
@@ -17,4 +17,9 @@
 
 .card-header {
     color: #033469; 
+    height: 60px;
+}
+
+.card-body {
+    padding: 5px;
 }
