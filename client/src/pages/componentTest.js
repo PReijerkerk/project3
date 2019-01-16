@@ -10,7 +10,7 @@ import API from "../utils/API";
 class TestPg extends Component {
     state={
         userData:{},
-        googleId: "Dantesting",
+        username: "Dantesting",
         tcase: '',
     }
        

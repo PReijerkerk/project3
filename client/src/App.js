@@ -8,6 +8,7 @@ import CollectionsPg from './pages/collectionsPg';
 import MainPg from './pages/mainPg';
 import AboutUs from './pages/aboutUs';
 import Contact from './pages/contact';
+import TestPg from './pages/componentTest';
 import './App.css';
 // import Portfolio from './components/PortfolioContainer';
 
@@ -39,6 +40,7 @@ class App extends Component {
              {this.loggedInRendering()}
             <Route exact path='/' render={(props) => <LoginPg {...props} toggleLoggedIn={this.toggleLoggedIn}/>} />
             <Route exact path='/profile' component={MainPg} />
+            <Route exact path='/test' component={TestPg} />
             <Route exact path='/collectionsPg' component={CollectionsPg} />
             <Route exact path='/aboutUs' component={AboutUs} />
             <Route exact path='/contact' component={Contact} />
