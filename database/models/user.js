@@ -27,7 +27,7 @@ const userSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    case:  [
+    tcase:  [
         {
           // Store ObjectIds in the array
           type: Schema.Types.ObjectId,
