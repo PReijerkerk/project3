@@ -1,20 +1,8 @@
-
-// // import Collections from '../components/CollectionsPgComponents/Container/container'
 import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem';
-// import '../components/CollectionsPgComponents/Container/collectionsContainer.css';
-// import Footer from '../components/MainPgComponents/Footer/footer';
-// // import Parallax from '../svg _background_files/rellax';
-// import API from "../utils/API";
-// // import { List, ListItem } from "../components/CollectionsPgComponents/List";
-// import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/Form";
-// // import '../components/CollectionsPgComponents/Container/container.css'
 import React, { Component } from 'react'
-// import Collections from '../components/CollectionsPgComponents/Container/container'
-// import AddItem from '../components/CollectionsPgComponents/AddBtn/addItem'
 import '../components/CollectionsPgComponents/Container/collectionsContainer.css'
 import Footer from '../components/MainPgComponents/Footer/footer'
 import API from "../utils/API";
-// import { List, ListItem } from "../components/CollectionsPgComponents/List";
 import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/Form";
 import ImageUpload from '../components/CollectionsPgComponents/ImageUpload/ImageUpload'
 import ImageGrid from '../components/CollectionsPgComponents/ImageGrid/ImageGrid'
@@ -22,7 +10,7 @@ import './collectionsPg.css'
 
 class CollectionPg extends Component {
   state = { 
-    googleId: 'Tommy',
+    username: '' ,
     userData: {},
     tcase: [],
     name: "",
@@ -35,9 +23,17 @@ class CollectionPg extends Component {
   componentDidMount() {
     this.loadTrophyCase()
   }
+  componentWillMount(){
+    let username = '';
+    if (localStorage && localStorage.getItem('username')) {
+       username = JSON.parse(localStorage.getItem('username'));
+      }
+     this.setState({username: username})
+     console.log(this.state.username);
+  }
 
   loadTrophyCase = () => {
-    API.getUserById(this.state.googleId)
+    API.getUserById(this.state.username)
     .then(res =>
         this.setState({
           userData: res.data

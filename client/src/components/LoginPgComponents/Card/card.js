@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Redirect } from 'react';
+// import Redirect from 'react-router-dom';
 import './card.css';
-import { GoogleLogout, GoogleLogin } from 'react-google-login';
-import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
+// import { GoogleLogout, GoogleLogin } from 'react-google-login';
+// import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
 import { FormBtn } from '../../CollectionsPgComponents/Form';
 import API from "../../../utils/API";
-import axios from 'axios';
+// import axios from 'axios';
 
 
 const logout = () => {
@@ -60,9 +61,16 @@ class Card extends Component {
     .then(response => {
       if(response.data) {
         console.log('successful signup')
-        this.setState({
-          redirectTo: '/profile'
-        })
+        console.log(response.data);
+        console.log(this.props);
+        localStorage.setItem('username',
+       JSON.stringify(this.state.username));
+
+        document.location.href = '/collectionsPg/';
+
+       
+        
+        
       } else {
         console.log('Sign-up error');
       }
@@ -156,6 +164,7 @@ class Card extends Component {
               disabled={!(this.state.email && this.state.password && this.state.firstName && this.state.lastName && this.state.username)}
               onClick={this.handleFormSubmit}
               >
+               
               Sign UP
               </FormBtn>
         </form>

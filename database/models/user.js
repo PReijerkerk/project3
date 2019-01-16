@@ -7,10 +7,7 @@ const bcrypt = require('bcryptjs');
 
 //Create Schema
 const userSchema = new Schema({
-    email: {
-        type: String,
-        default: ''
-    },
+  
     firstName: {
         type: String,
         default: ''
@@ -20,10 +17,13 @@ const userSchema = new Schema({
         default: ''
     },
     username: {
+        type: String
+    },
+    password: {
         type: String,
         default: ''
     },
-    password: {
+    email: {
         type: String,
         default: ''
     },
@@ -35,7 +35,7 @@ const userSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    case:  [
+    tcase:  [
         {
           // Store ObjectIds in the array
           type: Schema.Types.ObjectId,
