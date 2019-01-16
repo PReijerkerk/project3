@@ -7,11 +7,19 @@ const bcrypt = require('bcryptjs');
 
 //Create Schema
 const userSchema = new Schema({
+    email: {
+        type: String,
+        default: ''
+    },
     firstName: {
         type: String,
         default: ''
     },
     lastName: {
+        type: String,
+        default: ''
+    },
+    username: {
         type: String,
         default: ''
     },

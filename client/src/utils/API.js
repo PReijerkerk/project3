@@ -53,7 +53,7 @@ export default {
 ///////// USER API CRUD /////////
     // Create User
     createUser: function(userData) {
-        return axios.post('/api/signup', userData)
+        return axios.post('/api/users', userData)
     },
     // Get all Users
     getAllUsers: function() {
@@ -70,5 +70,8 @@ export default {
     // Deletes User by ID
     deleteUser: function(id) {
         return axios.delete('/api/users/' + id)
-    },   
+    },
+    userLogin: function(userData) {
+        return axios.post('/api/login', userData)
+    }   
 };
