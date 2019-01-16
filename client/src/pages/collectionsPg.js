@@ -10,13 +10,12 @@ import './collectionsPg.css'
 
 class CollectionPg extends Component {
   state = { 
-    googleId: 'Dantesting',
+    username: 'Dantheman',
     userData: {},
-    tcase: [],
-    name: "",
-    story: "",
-    user: "",
-    items: []
+    collectionName: "",
+    itemName: "",
+    items: [],
+    tcase: []
   
   }
 
@@ -25,7 +24,7 @@ class CollectionPg extends Component {
   }
 
   loadTrophyCase = () => {
-    API.getUserById(this.state.googleId)
+    API.getUserById(this.state.username)
     .then(res =>
         this.setState({
           userData: res.data
