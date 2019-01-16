@@ -58,11 +58,11 @@ class Card extends Component {
 
   // upon being called the full navBar will Render again
   //this should be set up for the login, logout buttons
-  // loggedInRendering = () =>{
-  //   if(this.state.isLoggedIn){
-  //     return <LoggedInNavTabs/>
-  //   }
-  // }
+  loggedInRendering = () =>{
+    if(this.state.isLoggedIn){
+      //return <LoggedInNavTabs/>
+    }
+  }
 
   render(){
     // const responseGoogle = (response) => {

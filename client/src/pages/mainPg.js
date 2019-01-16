@@ -6,11 +6,10 @@ import Parallax from '../svg _background_files/rellax';
 function MainPg() {
   return (
     <div className="mainContainer">
-  
-      {/* should render parallax benind profile - not working */}
-      <Parallax className="SVG"/>
+    
+    <Parallax className="SVG"/>
       <Profile className= "profile" />
-     
+       
       <br></br>
       <Footer />
     

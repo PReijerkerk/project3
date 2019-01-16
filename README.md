@@ -1,10 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Feature used:
+# [TROPHY CASE](https://tc-trophy-case.herokuapp.com/) - brought to you by heroku
+
+The all encombassing collections app for those who are want an organized expression of their possessions!
+
+## Motiviation:
+We created this app to fill a need to archive and store our personal collections - we maintain this app to ensure others who have similar needs can have their hobbies, passtimes, or otherwise - stored in a 'safe' & 'clean' platform that we know will make your life's collection a more accessable extension of your interests! 
+
+## Feature used:
 - Bootstrap 4
-- Pose JS
-- API used: 
-- Passport user Authentication
+- [Pose JS](https://popmotion.io/pose/) - animation library
+- [Rellax JS](https://dixonandmoe.com/rellax/) - Pure JS parallax library
+- [Passport JS](http://www.passportjs.org/) - user Authentication
 
 ## Available Scripts
 
@@ -19,6 +26,13 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ### `npm test`
+
+We proudly thought testing would be an asset for future development so we wanted to incorperate some basic [Error Boundary](https://reactjs.org/docs/error-boundaries.html) testing by using these useful packages:
+ - [enzyme](https://github.com/airbnb/enzyme)
+ - [enzyme-to-JSON](https://www.npmjs.com/package/enzyme-to-json) - a pretty way to see your tests running in your terminal
+ - [sinon](https://sinonjs.org/)
+ 
+ * And we hope to develope future in our endevours to have more error testing with [Jest](https://jestjs.io/) in the future!
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
