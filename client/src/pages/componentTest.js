@@ -40,11 +40,11 @@ class TestPg extends Component {
                             (
                                 <List>
                                     
-                                    {this.state.userData.tcase.map((item, index) => {
+                                    {this.state.userData.tcase.map((collection, index) => {
                                         return(
                                             <ListItem key={index}>
-                                                <li>{item.name}</li>
-                                                {item.items.map((subitem, i) => {
+                                                <li>{collection.name}</li>
+                                                {collection.items.map((subitem, i) => {
                                                     return(
                                                         <ul><li>{subitem.name}</li></ul>
                                                     )
