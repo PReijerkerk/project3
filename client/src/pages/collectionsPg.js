@@ -15,7 +15,8 @@ class CollectionPg extends Component {
     collectionName: "",
     itemName: "",
     items: [],
-    tcase: []
+    tcase: [],
+    name: ''
   
   }
 
@@ -43,12 +44,8 @@ class CollectionPg extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.name && this.state.user) {
-      API.saveCollection({
-        name: this.state.name,
-        story: this.state.story,
-        user: this.state.user,
-        items: [],
-        date: new Date(Date.now())
+      API.createCollection({
+       name: this.state.name
       })
         .then(res => this.loadTrophyCase())
         .catch(err => console.log(err));
@@ -60,7 +57,7 @@ class CollectionPg extends Component {
       <div className="container-margin">
           {/* <Collections/> */}
         <div className = 'container'>
-          <div className="collectionContainer">
+        <div className="collectionContainer">
             <table className="table collectionContainer">
               <thead className="thead-light">
                 <tr>
@@ -72,13 +69,13 @@ class CollectionPg extends Component {
               </thead>
                   {this.state.userData.tcase ? (
                   <tbody>
-                    {this.state.userData.tcase.map(collection => {
+                    {this.state.userData.tcase.map((collection, index) => {
                       return (
                         <tr>
                           <td>
                             {/* shelf list by collection id */}
-                          <div key={collection._id}>
-                            <a href={"/collection/" + collection._id}>
+                          <div key={index}>
+                            <a>
                               {/* Dan only listed collection name. We want to add collection.items */}
                               <strong>
                                 {collection.name} Shelf
@@ -87,8 +84,12 @@ class CollectionPg extends Component {
                           </div>
                           </td>
                           <td>
-                            {this.state.userData.tcase[0].items?(
-                              <div>{this.state.userData.tcase[0].items[0].name}</div>
+                            {this.state.userData.tcase[0].items ? (
+                              <div>{collection.items.map((subitem, i) => {
+                                return (
+                                  <td key={i} >{subitem.name}</td>
+                                )
+                              })}</div>
                             ):(<div>no items to display</div>)}
                           </td>
                         </tr>
@@ -148,6 +149,7 @@ class CollectionPg extends Component {
             </form>
             <FormBtn
               // disabled={!(this.state.user && this.state.name)}
+              type="button"
               onClick={this.handleFormSubmit}
             >
               Submit
