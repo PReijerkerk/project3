@@ -11,7 +11,7 @@ module.exports = {
     },
     findById: function(req, res) {
         db.User
-            .findOne({googleId: req.params.id})
+            .findOne({username: req.params.id})
             .populate({path:'tcase', model: 'Case', populate:{
                 path: 'items', model: 'Item' 
             }})
@@ -26,7 +26,7 @@ module.exports = {
     },
     update: function(req, res) {
         db.User
-          .findOneAndUpdate({googleId: req.params.id}, req.body, {new: true} )
+          .findOneAndUpdate({username: req.params.id}, req.body, {new: true} )
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },

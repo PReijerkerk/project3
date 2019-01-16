@@ -1,18 +1,12 @@
 const User = require('../../database/models/user');
 module.exports = (app) => { 
-
-
-
     // sign up
-
-    app.post('/api/account/signup', (req, res, next) => {
+    app.post('/api/signin', (req, res, next) => {
         const{body} = req;
-        const{
+        let {
             firstName,
             lastName,
-            password
-        } = body;
-        let {
+            password,
             email
         } = body;
 
