@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './card.css';
-import { GoogleLogout, GoogleLogin } from 'react-google-login';
+// import { GoogleLogout, GoogleLogin } from 'react-google-login';
 import LoggedInNavTabs from '../../MainPgComponents/NavTabs/loggedInRendering'
 import { FormBtn } from '../../CollectionsPgComponents/Form';
 import API from "../../../utils/API";
 import axios from 'axios';
 
 
-const logout = () => {
-  console.log('logout') // eslint-disable-line
-  sessionStorage.clear();
-}
+// const logout = () => {
+//   console.log('logout') // eslint-disable-line
+//   sessionStorage.clear();
+// }
 
 class Card extends Component {
 
@@ -42,10 +42,11 @@ class Card extends Component {
     .then(response => {
       if(response.data) {
         console.log('successful signup')
-        this.setState({
-          redirectTo: '/profile'
-        })
-      } else {
+        // this.setState({
+          // redirectTo: '/profile'
+        // })
+      }
+       else {
         console.log('Sign-up error');
       }
     }).catch(error => {
@@ -60,7 +61,7 @@ class Card extends Component {
   //this should be set up for the login, logout buttons
   loggedInRendering = () =>{
     if(this.state.isLoggedIn){
-      //return <LoggedInNavTabs/>
+      return <LoggedInNavTabs/>
     }
   }
 
@@ -130,6 +131,8 @@ class Card extends Component {
               >
               Sign UP
               </FormBtn>
+             
+              
         </form>
         {/* added onClick rendering that worked on the NavTabs.js 
         to the loggedInRendering.js file */}
@@ -154,7 +157,7 @@ class Card extends Component {
   
    </div>
   </div>
-  {/* {this.loggedInRendering()} */}
+  {this.loggedInRendering()}
 
 </div>
   );

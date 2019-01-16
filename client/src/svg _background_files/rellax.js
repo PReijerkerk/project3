@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import Rellax from 'rellax'; 
-import './rellax.css'; //at the momoent not using this went up tree to App.css to test issues with z-index
+import './rellax.css'; 
 import Trophy1 from './trophy1.svg'
 import Trophy2 from './trophy2.svg'
 import Trophy3 from './trophy3.svg'
@@ -20,6 +20,7 @@ componentDidMount = () => {
       <div>
         <div className = 'row'>
 
+          {/* implement illustrator rendered Trophy above called here at a neg speed of 2 */}
           <div className = 'col-lg-2'>
             <div className='rellax SVG' data-rellax-speed='-2' data-rellax-percentage=".1">
               <img src={Trophy1} alt = "trophy1"/>

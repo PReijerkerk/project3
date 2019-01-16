@@ -1,4 +1,3 @@
-
 // set up as stateful component because ideally this will be a living file that updates yearly or possibly monthly
 import React, { Component } from 'react';
 import {Radar} from 'react-chartjs-2';
@@ -14,9 +13,7 @@ const data = {
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(179,181,198,1)',
-      // the raw data below will be imported from Mongo DB = 
-      //just listing quantity within the collection please
-      //ideally within a 12 month cycle
+      //mongoD data is substituted here:
       data: [65, 59, 90, 81, 56, 55, 40]
     },
     {
@@ -27,6 +24,7 @@ const data = {
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(255,99,132,1)',
+      //mongoD data is substituted here:
       data: [28, 48, 40, 19, 96, 27, 100]
     }
   ]
@@ -44,3 +42,4 @@ class radarChart extends Component {
 }
  
 export default radarChart;
+

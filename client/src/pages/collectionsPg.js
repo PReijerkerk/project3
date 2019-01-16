@@ -7,10 +7,12 @@ import { Input, TextArea, FormBtn } from "../components/CollectionsPgComponents/
 import ImageUpload from '../components/CollectionsPgComponents/ImageUpload/ImageUpload'
 import ImageGrid from '../components/CollectionsPgComponents/ImageGrid/ImageGrid'
 import './collectionsPg.css'
+import LoggedInRendering from '../components/MainPgComponents/NavTabs/loggedInRendering'
+
 
 class CollectionPg extends Component {
   state = { 
-    username: 'Dantheman',
+    username: '',
     userData: {},
     collectionName: "",
     itemName: "",
@@ -55,6 +57,8 @@ class CollectionPg extends Component {
   render() { 
     return ( 
       <div className="container-margin">
+      
+      <LoggedInRendering/>
           {/* <Collections/> */}
         <div className = 'container'>
         <div className="collectionContainer">
